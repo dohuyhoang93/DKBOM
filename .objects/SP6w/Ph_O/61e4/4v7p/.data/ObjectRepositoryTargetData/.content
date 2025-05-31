@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="s11Gr_hBSkuXHW-IKiDQmg" Reference="hYsucKxYmkuUcfBJr80hwg/4v7pczcIy0exzttZM9tdQA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1013, 392, 903, 583" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' check:text='CWY-4X4BW-14_SEMIFINISH_DGL2' /&gt;" Guid="b467a95c-5200-4389-b4c7-01f6de660bc1" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1687, 479, 54, 23" Guid="0c7f216b-2909-441f-b49e-774b49ad3294" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADYAAAAXCAYAAABAtbxOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAABpSURBVFhH7dexDYAwDETRrMDULEFFwR7MYAmlSMECVMj1oXRBygJ3Oku/cPnkyiUzERFQmNGhC+uLYmU5biimC9uuB+tZsbeXvtFhGEOGsWUYW4axZRhbhrFlGFs/2OyXUUgX1s+nV8UHNRYVM0BIZc8AAAAASUVORK5CYII=" SearchSteps="Image" TargetType="ImageBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopRight" X="-204" Y="102" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="66499677b3ca43d83edf6e26644412fd.png" xmlns="">0TAmET_DKeka76i1yqgEbqQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

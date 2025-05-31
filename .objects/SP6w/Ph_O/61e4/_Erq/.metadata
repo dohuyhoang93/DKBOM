@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Type Into 'angkor.ylw.main.mainwin…'",
+  "Type": "Element",
+  "Id": "_Erqpz3tfUqrg-cMmRaNog",
+  "Reference": "hYsucKxYmkuUcfBJr80hwg/_Erqpz3tfUqrg-cMmRaNog",
+  "ParentRef": "hYsucKxYmkuUcfBJr80hwg/61e4oJAK-k6MydzSXG6Zow",
+  "Created": "2024-08-28T06:03:29.9615931Z",
+  "Updated": "2024-08-28T06:03:29.9615931Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

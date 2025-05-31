@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="9mDOnaoA-EKzL_0eDtvUGg" Reference="hYsucKxYmkuUcfBJr80hwg/_Erqpz3tfUqrg-cMmRaNog" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1701, 465, 35, 14" DesignTimeScaleFactor="1" ElementType="Text" Guid="c6fc661f-cb24-4841-819b-b6b050565e3b" NativeTextArgument="00000" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="TextNative" TargetType="NativeTextBased" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="d48cd7ec783d7081df54473eda15acea.png" xmlns="">0Zi199UpamEC6eKvxnL0Cdg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

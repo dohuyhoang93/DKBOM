@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="zBMM8sh6j0mgeMTLnAYyJA" Reference="hYsucKxYmkuUcfBJr80hwg/HZ3kSb5iNEityJV8YSMdSg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1013, 392, 903, 583" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' check:text='CWY-4X4BW-14_SEMIFINISH_DGL2' /&gt;" Guid="d16be598-1d7d-4cdc-bea4-98c29b54f2ab" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1685, 389, 58, 177" Guid="ca46d77d-bf8d-4682-9c90-72da68e6844b" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADoAAACxCAYAAACVzK4zAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAN/SURBVHhe7ZjRseogFEUtz4Isxwpswo9bgg34Ywl+553NA+cEAaPGmC17zTBciJCzgJBwN0Mn9CP69/c39JA2h8Nh6CHdlu7lcgkV7NQ8JMqKRGMuUTYkGnOJsiHRmEuUDYnGXKJsSDTmE0SP9uvtMJxjcaUsL7qzrvelH1vd1q5Zd59gedHzvi5ztGsfWhmfFYXUZhcLxtH+3lpdYm/tNnarlHZxBFI7zH665gcnb+f7rPA9UfydX0v9hHZOrtUO0qsWRYCjZ9X+Ts9o3g7lWjvfZ4OVicZ+6EXxzKWg8iXoA26J5u18nw1mErWf5wlLEPgNZedkAGbn1iYTq4mCVp8VZhD9MhistFs3WIFoY+mXCEvXzaif+QZljzPRjE5kBTO6DBKN+TTRfJcE6VkqfsA/QanvF3hDtLGJBElci6+ep2Vd36sWfZvViFoE+C4N27sFhOOVD2b0IeAGIw/afw3dqPRdOslM6u8/88yov2F+M39tcmB5307Ot/mq6Gg2XUKgL4u6NiivRrT2SfZTorhZqgfhWiXo6snjRdHGSeYNUYsibRr77IZBNl7z0mDSyaPRtxcFE08yb4hy8SOibqlX0IzGXKJszCv68B1q3b56mkk7OdqHndbKyCf2N5/oaNsvbQ5WwCsjBfqM8O3djH59W/TZ3oQS84ki+NtkPtgFMSiViX8aDMJy/xyDmN0wgFG25uElbrL5yQaBPfpIQPLB105DAX/vOvOI5l8rfkbDszlBdPR8o72FgGJYtln7kRgGKJe/Zx7Ru+BfEA0Ccdb884sBGD3PuRjKcVAarGdGPen7FcEXRb0Yyl68zDyiQczJtEQhURJFvX8u086cL9W8fHfvMjOJGqNdN456mpU0Q0hTTixI/jetzQjiy+26xt3yXQIMzuNlC+YTBaOdcwHS8p7AvKIrRqIxlygbEo25RNmQaMwlyoZEYy5RNqqiqOwhba7X65DS6XSK/tyUPCTKjEQlSopEJUqKRCVKikQlSopEJUpK36Ko7CFp6TIjUYmSIlGJkiJRiZIiUYmSIlGJkiLRLkRR2UPS0mVGohIlRaISJUWiEiVFohIlRaISJUWiXYiisoekpcuMRCVKikQlSopEJUqKRCVKikQlSopEuxBFZQ9JS5cZiUqUFIlKlBSJSpQUiUqUFIlKlBSJdiGKyh6Sli4zEv190WH4B87HVBZ9z46LAAAAAElFTkSuQmCC" SearchSteps="Image" TargetType="ImageBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopRight" X="-205" Y="161" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="414dd772a939303883d7eca7f6da5deb.png" xmlns="">0kL6LTNEwrkC964afOi3MOA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

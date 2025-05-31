@@ -1,0 +1,99 @@
+﻿{
+  "Metadata": {
+    "Id": "9ca67cf6-773c-4c40-b0db-c93867da22ba",
+    "Kind": "FormIo"
+  },
+  "DesignProperties": {
+    "Title": "Chọn thao tác",
+    "Width": 800,
+    "Height": 700,
+    "Theme": "Default",
+    "ShowInTaskbar": true,
+    "ShowMargin": true,
+    "CustomStyle": ""
+  },
+  "Data": {
+    "components": [
+      {
+        "title": "Lựa chọn thao tác cần chạy",
+        "theme": "info",
+        "collapsible": false,
+        "key": "luachonthaotac",
+        "type": "panel",
+        "label": "Panel",
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "label": "Đăng ký Items",
+            "tableView": false,
+            "defaultValue": false,
+            "key": "DK_Item",
+            "type": "checkbox",
+            "input": true
+          },
+          {
+            "label": "Đăng ký BOM",
+            "tableView": false,
+            "defaultValue": false,
+            "key": "DK_BOM",
+            "type": "checkbox",
+            "input": true
+          },
+          {
+            "label": "Đăng ký hàng theo công đoạn",
+            "tableView": false,
+            "defaultValue": false,
+            "key": "DK_HTCD",
+            "type": "checkbox",
+            "input": true
+          },
+          {
+            "label": "Đăng ký quy trình sản xuất theo sản phẩm",
+            "tableView": false,
+            "key": "DK_QTSX",
+            "type": "checkbox",
+            "input": true,
+            "defaultValue": false
+          },
+          {
+            "label": "Đăng ký trung tâm làm việc",
+            "tableView": false,
+            "key": "DK_TTLV",
+            "type": "checkbox",
+            "input": true,
+            "defaultValue": false
+          }
+        ]
+      },
+      {
+        "title": "Lưu ý",
+        "theme": "danger",
+        "collapsible": false,
+        "key": "notice",
+        "type": "panel",
+        "label": "Panel",
+        "input": false,
+        "tableView": false,
+        "components": [
+          {
+            "content": "<!DOCTYPE HTML>\n<p>\n1.Hãy <strong>tắt Unikey</strong> hoặc các bàn phím Tiếng Việt.<br>\n2.Đăng nhập sẵn KSystem<br>\n3.Sau khi ấn \"Xác nhận\", vui lòng không sử dụng chuột/bàn phím cho đến khi có thông báo\n</p>",
+            "key": "label",
+            "input": false,
+            "tableView": false,
+            "label": "Label",
+            "type": "label"
+          }
+        ]
+      },
+      {
+        "label": "Xác nhận",
+        "tableView": false,
+        "key": "XacNhan",
+        "type": "button",
+        "input": true,
+        "saveOnEnter": false
+      }
+    ]
+  }
+}

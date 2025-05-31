@@ -1,0 +1,13 @@
+﻿{
+  "Name": "BOM품번(1)",
+  "Type": "Screen",
+  "Id": "61e4oJAK-k6MydzSXG6Zow",
+  "Reference": "hYsucKxYmkuUcfBJr80hwg/61e4oJAK-k6MydzSXG6Zow",
+  "ParentRef": "hYsucKxYmkuUcfBJr80hwg/Ph_OI_hyUkqtRmJN3qL_YA",
+  "Created": "2024-08-28T04:58:19.0479003Z",
+  "Updated": "2024-08-28T04:58:19.0479003Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

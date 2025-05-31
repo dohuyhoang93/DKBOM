@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="smY9qv_ffUi7ZV5o6lb08A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1013, 392, 903, 583" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' check:text='CWY-4X4BW-14_SEMIFINISH_DGL2' /&gt;" Guid="a3eadd31-05fc-4d6b-bdf9-9b3e56799b0b" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="6bd15434e7b3ea9a0776fb1087000bb6.png" xmlns="">0V5uSY5ZlE0mWsNyeqIMpsw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

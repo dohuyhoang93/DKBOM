@@ -1,0 +1,12 @@
+﻿{
+  "Name": "CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ",
+  "Type": "Screen",
+  "Id": "19QKirxbKk2ZI4qV_mMv5g",
+  "Reference": "hYsucKxYmkuUcfBJr80hwg/19QKirxbKk2ZI4qV_mMv5g",
+  "ParentRef": "hYsucKxYmkuUcfBJr80hwg/M9uLV_rAMEedchINt9MpRQ",
+  "Created": "2024-08-28T05:00:14.4301679Z",
+  "Updated": "2024-08-28T05:00:14.4301679Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="r3pyLU8UvkWe6xf3GW1tUw" Reference="hYsucKxYmkuUcfBJr80hwg/YQcHShyjYEmXP-VcyHYvsQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" DesignTimeRectangle="1013, 392, 903, 583" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' check:text='item_code' /&gt;" Guid="e810e0f1-5f9b-49e0-a078-3f97e2f08ad0" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1221, 458, 250, 27" Guid="435bc563-3a89-48c2-b9e9-309801aac65c" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAPoAAAAbCAYAAABV9JIaAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAACaSURBVHhe7dW7EcMgFERR9V8K7VCAIwpQrAAZJ9ang7dnZ84ABdxhm9+NMWZrbV3NrMCeTQvdrOCEbhawV+jrAdS2ffZjLr333wnUcG1a6FCU0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CGA0CHALfT1AGrzo0NR16aFDkUJHQL8mz7mCTeGUkpPwz+ZAAAAAElFTkSuQmCC" SearchSteps="Image" TargetType="ImageBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <TargetAnchorable.PointOffset>
+        <PointOffset Position="TopLeft" X="227" Y="83" />
+      </TargetAnchorable.PointOffset>
+      <imageRef attrName="InformativeScreenshot" originalValue="ad1926a332d68152de3b5dd2abaf51d0.png" xmlns="">0l8TKH9eJGkmFC22hhpWeSg</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

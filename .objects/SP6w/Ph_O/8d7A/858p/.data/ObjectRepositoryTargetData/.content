@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="kkCboA_2jkqrh8IbRfe82g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" CVScreenId="db930aeb-5db4-4155-bc90-5e0dcabfae37" CvElementArea="136, 39, 264, 20" CvType="InputBox" DesignTimeRectangle="139, 42, 241, 15" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;wnd ctrlname='findCombo' /&gt;&lt;wnd aaname='Nội dung sẽ tìm kiếm.(N)' cls='Edit' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='findCombo' /&gt;&lt;wnd aaname='Nội dung sẽ tìm kiếm.(N)' cls='Edit' /&gt;" Guid="bb105d29-a0f3-455e-8bb2-863e30f5c780" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' ctrlname='SearchDialog' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="db930aeb-5db4-4155-bc90-5e0dcabfae37" CvTextArea="13, 42, 116, 13" CvTextArgument="Noi dung se tim kiem.(M" CvType="Text" DesignTimeRectangle="12, 39, 129, 20" ElementType="Text" FullSelectorArgument="&lt;wnd ctrlname='findLabel' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='findLabel' check:text='Nội dung sẽ tìm kiếm.(&amp;amp;N)' /&gt;" Guid="cf511fe7-0201-4b4e-8fbd-0b471d8c0369" SearchSteps="Selector, FuzzySelector, CV" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="d53a1d9ae55c367901bdacbb737efa74.png" xmlns="">0TVKlMGMDi0G4YsFUjc25nw</imageRef>
+    </TargetAnchorable>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Type Into 'CWY-4X4BW-14_SEMIFINISH…'",
+  "Type": "Element",
+  "Id": "4v7pczcIy0exzttZM9tdQA",
+  "Reference": "hYsucKxYmkuUcfBJr80hwg/4v7pczcIy0exzttZM9tdQA",
+  "ParentRef": "hYsucKxYmkuUcfBJr80hwg/61e4oJAK-k6MydzSXG6Zow",
+  "Created": "2024-08-28T05:05:52.5900468Z",
+  "Updated": "2024-08-28T05:05:52.5900468Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=24.10.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=24.10.3.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
