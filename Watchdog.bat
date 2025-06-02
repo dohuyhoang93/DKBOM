@@ -3,21 +3,31 @@ setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 
 :: === CẤU HÌNH ===
 set "LOCK_FILE=%USERPROFILE%\Documents\LogUiPath\STATUS.lock"
+set "INPUTJSON=%USERPROFILE%\Documents\LogUiPath\input.json"
 set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
 set "PROJECT_PATH=%USERPROFILE%\Documents\DK.BOM.1.7.6.nupkg"
+
 set "MAX_RETRY=3"
-set /a WAIT_SECONDS=120
+set /a WAIT_SECONDS=30
 set /a WAIT_SECONDS_EXIT_FILE=30
 set /a RETRY_COUNT=0
 set "PREV_FILETIME="
 echo [*] Watchdog initial complete
 
+echo [~] Đang khởi chạy tiến trình UiPath lần đầu...
+start "run uipath" /b "%UIPATH_EXE%" execute --file "%PROJECT_PATH%"
+echo [~] Hoàn thành khởi động tiến trình UiPath
+echo =======================================================
+
 :: === MAIN VÒNG LẶP WATCHDOG ===
 :RETRY_LOOP
-echo [*] Watchdog is running in loop
+echo [*] Watchdog is running
 
 if %RETRY_COUNT% GEQ %MAX_RETRY% (
-    echo [*] Đã thử %MAX_RETRY% lần nhưng file lock không cập nhật. Thoát watchdog.
+    echo [*] Đã thử %MAX_RETRY% lần nhưng file lock không cập nhật. Xóa input.json và thoát watchdog.
+	echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
+	timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
+	del %INPUTJSON%
 	pause
     goto :EOF
 )
@@ -31,7 +41,6 @@ if not exist "%LOCK_FILE%" (
     goto :RESTART_UIPATH
 )
 
-echo call get file modtime funtion 1st
 call :GET_FILE_MODTIME
 set "PREV_FILETIME=!FILETIME!"
 echo [+] Thời gian sửa trước: !PREV_FILETIME!
@@ -44,7 +53,6 @@ if not exist "%LOCK_FILE%" (
     goto :RESTART_UIPATH
 )
 
-echo call get file modtime funtion 2nd
 call :GET_FILE_MODTIME
 echo [+] Thời gian sửa sau: !FILETIME!
 
