@@ -8,7 +8,7 @@ set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
 set "PROJECT_PATH=%USERPROFILE%\Documents\DK.BOM.1.7.6.nupkg"
 
 set "MAX_RETRY=3"
-set /a WAIT_SECONDS=30
+set /a WAIT_SECONDS=120
 set /a WAIT_SECONDS_EXIT_FILE=30
 set /a RETRY_COUNT=0
 set "PREV_FILETIME="
