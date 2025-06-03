@@ -1,11 +1,12 @@
 @echo off
+chcp 65001 >nul
 setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 
 :: === CẤU HÌNH ===
 set "LOCK_FILE=%USERPROFILE%\Documents\LogUiPath\STATUS.lock"
 set "INPUTJSON=%USERPROFILE%\Documents\LogUiPath\input.json"
 set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
-set "PROJECT_PATH=%USERPROFILE%\Documents\DK.BOM.1.7.6.nupkg"
+set "PROJECT_PATH=%USERPROFILE%\Documents\DK.BOM.1.7.7.nupkg"
 
 set "MAX_RETRY=3"
 set /a WAIT_SECONDS=120
@@ -22,6 +23,15 @@ echo =======================================================
 :: === MAIN VÒNG LẶP WATCHDOG ===
 :RETRY_LOOP
 echo [*] Watchdog is running
+
+if %RETRY_COUNT% GEQ %MAX_RETRY% (
+    echo [*] Đã thử %MAX_RETRY% lần nhưng file lock không cập nhật. Xóa input.json và thoát watchdog.
+	echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
+	timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
+	del %INPUTJSON%
+	pause
+    goto :EOF
+)
 
 echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
 timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
@@ -53,20 +63,11 @@ if "!FILETIME!"=="!PREV_FILETIME!" (
 )
 
 echo [+] File được cập nhật. Tiến trình đang hoạt động tốt.
-set /a RETRY_COUNT=0
 goto :RETRY_LOOP
 
 :: === HÀM XỬ LÝ KHỞI ĐỘNG LẠI ===
 :RESTART_UIPATH
 set /a RETRY_COUNT+=1
-
-if %RETRY_COUNT% GTR %MAX_RETRY% (
-    echo [*] Đã thử %MAX_RETRY% lần nhưng file lock không cập nhật. Xóa input.json và thoát watchdog.
-	del %INPUTJSON%
-    pause
-    goto :EOF
-)
-
 echo [*] Đang thử khởi động lại lần thứ %RETRY_COUNT%...
 
 echo [~] Đóng toàn bộ tiến trình UiPath và Ksystem...
@@ -88,4 +89,4 @@ for %%F in ("%LOCK_FILE%") do (
     set "FILETIME=%%~tF"
 )
 echo [~] Đã kiểm tra thời điểm modify STATUS.lock
-exit /b
+goto :eof
