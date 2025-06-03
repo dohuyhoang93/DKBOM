@@ -31,14 +31,15 @@ Nếu không đúng, hãy cập nhật đường dẫn vào `Watchdog.bat` tại
 Sau khi dự án chạy xong mà không phát sinh lỗi gì. Nó sẽ xóa các tệp:
 `input.json` và `STATUS.lock`.
 Tên mã đã đăng ký xong, được lưu trong các file log tại `Document\LogUiPath`:<br>
+
 > DK_ITEM_Log.txt<br>
 > DK_BOM_Log.txt<br>
 > DK_HTCD_log.txt<br>
 > DK_QTSX_Log.txt<br>
 > DK_TTLV_Log.txt<br>
 
-UiPath *không cho phép* mở lại dự án và `đăng ký lại` các mã này. Trừ khi bạn **xóa thủ công** tên mã được lưu trong các file log này. Hoặc xóa toàn bộ các file cũng như cả thư mục `LogUiPath`.<br>
----
+UiPath **không cho phép** mở lại dự án và **đăng ký lại** các mã này. Trừ khi bạn **xóa thủ công** tên mã được lưu trong các file log này. Hoặc xóa toàn bộ các file cũng như cả thư mục **LogUiPath**.<br>
+___
 Dù đã có `Watchdog` giám sát. Nhưng không thể đảm bảo tất cả lỗi sẽ được phát hiện. Một số trường hợp:
 - Lỗi input đầu vào từ file `Input data.xlsm`<br>
 - Lỗi kết nối internet của Ksystem<br>
