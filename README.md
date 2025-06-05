@@ -7,18 +7,17 @@
     >id:user_name_đăng_nhập<br>
     >passwword:mật_khẩu
 ## 2. Lấy file `Input Data.xlsm` & `Watchdog.bat`
-- Vẫn tại thư mục chính trong file `.nupkg`. Tìm file: `Watchdog.bat`. Copy file này và paste vào thư mục Documents (cùng vị trí với file `.nupkg`).<br>
-    - Nếu chương trình giải nén của bạn không cho phép copy trực tiếp. Hãy quay lại thư mục giải nén từ file `zip` ra để lấy file `Watchdog.bat`. Bạn cũng cần phải lấy file `Input Data.xlsm` từ trong này ra để sử dụng.<br>
-- Kiểm tra đường dẫn tới `UiRobot` có đúng với thực tế trên máy bạn không. Đường dẫn đúng có dạng:<br>*(C:\username\AppData\Local\Programs\UiPath\Studio\UiRobot.exe)* <br>
+- Tại thư mục đã giải nén, tìm file: `Watchdog.bat`. Copy file này và paste vào thư mục nào bạn thích. Hoặc tạo đường dẫn ***shortcut*** tới file này.<br>
+- Bạn cũng cần phải lấy file `Input Data.xlsm` từ trong này ra để sử dụng. Bởi vì, mỗi phiên bản mới của Project UiPath, sẽ đi kèm với thay đổi về input đầu vào trong file `Input data.xlsm` này.<br>
+- Kiểm tra đường dẫn tới `UiRobot.exe` có đúng với thực tế trên máy bạn không. Đường dẫn đúng có dạng:<br>*(C:\username\AppData\Local\Programs\UiPath\Studio\UiRobot.exe)* <br>
 Nếu không đúng, hãy cập nhật đường dẫn vào `Watchdog.bat` tại dòng:<br>
     >*set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"*
-- Kiểm tra đường dẫn đến file `.nupkg` trong `Watchdog.bat` có đúng với thực tế trên máy bạn không. Hãy đảm bảo đường dẫn và tên của file `.nupkg` trùng với khai báo trong `Watchdog.bat`. Cập nhật đường dẫn đúng trong file `Watchdog.bat` tại dòng:<br>
-    >*set "PROJECT_PATH=%USERPROFILE%\Documents\DK.BOM.\*\.\*\.\*\.nupkg"*
+
 
 #  Khởi chạy dự án:
 ## Có 2 cách để chạy dự án.
 1. **Chạy trực tiếp dự án trong UiPath studio.**<br>
-    - Cách này chỉ có khả năng tự khởi động lại Ksystem sau khi đăng ký 10 mã.<br>
+    - Cách này chỉ có khả năng tự khởi động lại Ksystem sau khi đăng ký 10 mã.***(Tính năng này tạm thời đã bị tắt bỏ)***<br> 
     - Có thể quay lại bước đã dừng trước đó.<br>
 2. **Chạy từ `Watchdog.bat`**<br>
     - Có khả năng nhận ra dự án Uipath đang bị dừng do lỗi. Nó sẽ đóng tất cả tiến trình UiPath & Ksystem. Sau đó khởi động và chạy lại từ vị trí bị đăng ký lỗi trước đó. Sau 3 lần thử lại này. `Watchdog` sẽ tự thoát và xóa file `input.json` chứa thông tin về:<br>
