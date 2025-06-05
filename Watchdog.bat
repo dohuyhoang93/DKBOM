@@ -121,7 +121,7 @@ for %%F in ("%LOCK_FILE%") do (
     set "FILETIME=%%~tF"
 )
 echo [~] Đã kiểm tra thời điểm modify STATUS.lock
-goto :eof
+goto :EOF
 
 :: === HÀM HIỂN THỊ ===
 :section
