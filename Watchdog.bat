@@ -8,12 +8,14 @@ call :box "WATCHDOG TRACKING UiPATH PROCESS"
 set "LOCK_FILE=%USERPROFILE%\Documents\LogUiPath\STATUS.lock"
 set "INPUTJSON=%USERPROFILE%\Documents\LogUiPath\input.json"
 set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
-set "PROJECT_PATH=%USERPROFILE%\Documents\DKBOM.1.7.11.nupkg"
+set "PROJECT_PATH_SEARCH=%USERPROFILE%\Documents\*.nupkg"
+set "PROJECT_PATH="
 set "MAX_RETRY=3"
 set /a WAIT_SECONDS=120
 set /a WAIT_SECONDS_EXIT_FILE=30
 set /a RETRY_COUNT=0
 set "PREV_FILETIME="
+call :SEARCH_NUPKG
 
 echo [*] Watchdog initial complete
 
@@ -26,7 +28,7 @@ call :done
 
 :: === MAIN VÒNG LẶP WATCHDOG ===
 :RETRY_LOOP
-echo [*] Watchdog is running
+echo [~] Watchdog is running
 echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
 
 timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
@@ -61,6 +63,31 @@ echo [+] File được cập nhật. Tiến trình đang hoạt động tốt.
 set /a RETRY_COUNT=0
 goto :RETRY_LOOP
 
+
+:: === HÀM TÌM FILE NUPKG ===
+:SEARCH_NUPKG
+REM Kiểm tra xem biến đã được gán đúng chưa
+ECHO [~] Search nupkg file in: %PROJECT_PATH_SEARCH%
+
+REM Lặp qua các tệp khớp với mẫu
+FOR %%F IN ("%PROJECT_PATH_SEARCH%") DO (
+    REM ECHO Found nupkg file: "%%F"
+	SET "PROJECT_PATH=%%F"
+	echo [.] Found nupkg file: !PROJECT_PATH!
+	REM GOTO :EOF khớp với file cuối cùng matching
+)
+
+REM Nếu không có tệp nào khớp, vòng lặp FOR sẽ không thực thi gì cả.
+IF NOT EXIST "%PROJECT_PATH%" (
+    ECHO [.] No .nupkg files starting with DKBOM found in %PROJECT_PATH_SEARCH%
+	call :section "Watchdog Stopped"
+	pause
+	exit
+)
+
+echo [*] Set nupkg project file is: %PROJECT_PATH%
+GOTO :EOF
+
 :: === HÀM XỬ LÝ KHỞI ĐỘNG LẠI ===
 :RESTART_UIPATH
 if %RETRY_COUNT% GEQ %MAX_RETRY% (
@@ -70,7 +97,7 @@ if %RETRY_COUNT% GEQ %MAX_RETRY% (
 	del %INPUTJSON%
 	call :section "Watchdog Stopped"
 	pause
-    goto :EOF
+    exit
 )
 set /a RETRY_COUNT+=1
 echo [*] Đang thử khởi động lại lần thứ %RETRY_COUNT%...
@@ -83,7 +110,7 @@ taskkill /f /im Angkor.Ylw.Main.MainWin45.exe >nul 2>&1
 
 echo [~] Đang khởi chạy lại tiến trình UiPath...
 start "run uipath" /b "%UIPATH_EXE%" execute --file "%PROJECT_PATH%"
-echo [~] Hoàn thành khởi động lại tiến trình UiPath
+echo [*] Hoàn thành khởi động lại tiến trình UiPath
 call :done
 goto :RETRY_LOOP
 
