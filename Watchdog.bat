@@ -2,38 +2,33 @@
 chcp 65001 >nul
 setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 
+call :box "WATCHDOG TRACKING UiPATH PROCESS"
+
 :: === CẤU HÌNH ===
 set "LOCK_FILE=%USERPROFILE%\Documents\LogUiPath\STATUS.lock"
 set "INPUTJSON=%USERPROFILE%\Documents\LogUiPath\input.json"
 set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
-set "PROJECT_PATH=%USERPROFILE%\Documents\DKBOM.1.7.10.nupkg"
-
+set "PROJECT_PATH=%USERPROFILE%\Documents\DKBOM.1.7.11.nupkg"
 set "MAX_RETRY=3"
 set /a WAIT_SECONDS=120
 set /a WAIT_SECONDS_EXIT_FILE=30
 set /a RETRY_COUNT=0
 set "PREV_FILETIME="
+
 echo [*] Watchdog initial complete
+
+call :section "Watchdog running"
 
 echo [~] Đang khởi chạy tiến trình UiPath lần đầu...
 start "run uipath" /b "%UIPATH_EXE%" execute --file "%PROJECT_PATH%"
 echo [~] Hoàn thành khởi động tiến trình UiPath
-echo =======================================================
+call :done
 
 :: === MAIN VÒNG LẶP WATCHDOG ===
 :RETRY_LOOP
 echo [*] Watchdog is running
-
-if %RETRY_COUNT% GEQ %MAX_RETRY% (
-    echo [*] Đã thử %MAX_RETRY% lần nhưng file lock không cập nhật. Xóa input.json và thoát watchdog.
-	echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
-	timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
-	del %INPUTJSON%
-	pause
-    goto :EOF
-)
-
 echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
+
 timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
 
 echo [.] Đang kiểm tra file: %LOCK_FILE%
@@ -63,10 +58,20 @@ if "!FILETIME!"=="!PREV_FILETIME!" (
 )
 
 echo [+] File được cập nhật. Tiến trình đang hoạt động tốt.
+set /a RETRY_COUNT=0
 goto :RETRY_LOOP
 
 :: === HÀM XỬ LÝ KHỞI ĐỘNG LẠI ===
 :RESTART_UIPATH
+if %RETRY_COUNT% GEQ %MAX_RETRY% (
+    echo [*] Đã thử %MAX_RETRY% lần nhưng file lock không cập nhật. Xóa input.json và thoát watchdog.
+	echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
+	timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
+	del %INPUTJSON%
+	call :section "Watchdog Stopped"
+	pause
+    goto :EOF
+)
 set /a RETRY_COUNT+=1
 echo [*] Đang thử khởi động lại lần thứ %RETRY_COUNT%...
 
@@ -79,10 +84,10 @@ taskkill /f /im Angkor.Ylw.Main.MainWin45.exe >nul 2>&1
 echo [~] Đang khởi chạy lại tiến trình UiPath...
 start "run uipath" /b "%UIPATH_EXE%" execute --file "%PROJECT_PATH%"
 echo [~] Hoàn thành khởi động lại tiến trình UiPath
-echo =======================================================
+call :done
 goto :RETRY_LOOP
 
-:: === HÀM LẤY THỜI GIAN MODIFY FILE ===
+:: === HÀM LẤY THỜI GIAN ===
 :GET_FILE_MODTIME
 set "FILETIME="
 for %%F in ("%LOCK_FILE%") do (
@@ -90,3 +95,56 @@ for %%F in ("%LOCK_FILE%") do (
 )
 echo [~] Đã kiểm tra thời điểm modify STATUS.lock
 goto :eof
+
+:: === HÀM HIỂN THỊ ===
+:section
+echo.
+echo =======================================================
+echo 🔷 %~1
+echo =======================================================
+echo.
+goto :eof
+
+:done
+echo.
+echo ✔ DONE!
+echo -------------------------------------------------------
+echo.
+goto :eof
+
+:box
+setlocal enabledelayedexpansion
+set "msg=%~1"
+
+:: Tính độ dài chuỗi gốc
+set "str=%msg%"
+set /a len=0
+:strlen_loop
+if defined str (
+    set "str=!str:~1!"
+    set /a len+=1
+    goto strlen_loop
+)
+
+:: Cộng thêm 2 ký tự padding (1 mỗi bên)
+set /a plen=len + 2
+
+:: Tạo dòng trên
+set "top=┌"
+for /l %%i in (1,1,%plen%) do set "top=!top!─"
+set "top=!top!┐"
+
+:: Tạo dòng giữa, có padding trái và phải
+set "mid=│ !msg! │"
+
+:: Tạo dòng dưới
+set "bot=└"
+for /l %%i in (1,1,%plen%) do set "bot=!bot!─"
+set "bot=!bot!┘"
+
+:: In ra
+echo !top!
+echo !mid!
+echo !bot!
+endlocal
+exit /b
