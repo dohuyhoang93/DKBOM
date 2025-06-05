@@ -144,20 +144,20 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="DK_BOM" sap:VirtualizedContainerService.HintSize="1110,11454" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="DK_BOM" sap:VirtualizedContainerService.HintSize="1232,11472" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="1040,173" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Warn" Message="[&quot;Di vao DK BOM workflow&quot;]" />
-    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="1040,11258" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="6fd45075-60dd-4128-9292-e7ee2c1b3a20" Version="V2">
+    <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="1040,11276" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" ScopeGuid="6fd45075-60dd-4128-9292-e7ee2c1b3a20" Version="V2">
       <uix:NApplicationCard.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,10944" sap2010:WorkflowViewState.IdRef="Sequence_53">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,10962" sap2010:WorkflowViewState.IdRef="Sequence_53">
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Default="[arg_DataTable]" Name="DK_BOM_DataTable" />
             </Sequence.Variables>
@@ -166,7 +166,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NCheckState DisplayName="Check App State 'CÔNG TY'" sap:VirtualizedContainerService.HintSize="972,1486" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="6fd45075-60dd-4128-9292-e7ee2c1b3a20" Timeout="2" Version="V3">
+            <uix:NCheckState DisplayName="Check App State 'CÔNG TY'" sap:VirtualizedContainerService.HintSize="972,1526" sap2010:WorkflowViewState.IdRef="NCheckState_6" ScopeIdentifier="6fd45075-60dd-4128-9292-e7ee2c1b3a20" Timeout="2" Version="V3">
               <uix:NCheckState.IfExists>
                 <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_55">
                   <sap:WorkflowViewStateService.ViewState>
@@ -399,13 +399,13 @@
                 </uix:VerifyExecutionOptions>
               </uix:NClick.VerifyOptions>
             </uix:NClick>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DK_BOM_DataTable]" DisplayName="For Each Row in Data Table - Lặp qua từng hàng đảo ngược từ dưới lên" sap:VirtualizedContainerService.HintSize="972,7552" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DK_BOM_DataTable]" DisplayName="For Each Row in Data Table - Lặp qua từng hàng đảo ngược từ dưới lên" sap:VirtualizedContainerService.HintSize="972,7530" sap2010:WorkflowViewState.IdRef="ForEachRow_4">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="672,7363" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="672,7357" sap2010:WorkflowViewState.IdRef="Sequence_54">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="s:Array" Name="array_1" />
                       <Variable x:TypeArguments="sd:DataTable" Name="materialTable" />
@@ -446,7 +446,7 @@
                         <InArgument x:TypeArguments="x:Int32">[DK_BOM_DataTable.RowCount]</InArgument>
                       </Assign.Value>
                     </Assign>
-                    <If Condition="[TableRows - 1 - arg_CurrentRowNumberOut &lt; 0]" sap:VirtualizedContainerService.HintSize="638,367" sap2010:WorkflowViewState.IdRef="If_14">
+                    <If Condition="[TableRows - 1 - arg_CurrentRowNumberOut &lt; 0]" sap:VirtualizedContainerService.HintSize="638,335" sap2010:WorkflowViewState.IdRef="If_14">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_57">
                           <sap:WorkflowViewStateService.ViewState>
@@ -468,7 +468,7 @@
                         </Sequence>
                       </If.Else>
                     </If>
-                    <Assign sap:VirtualizedContainerService.HintSize="542,114" sap2010:WorkflowViewState.IdRef="Assign_26">
+                    <Assign sap:VirtualizedContainerService.HintSize="638,114" sap2010:WorkflowViewState.IdRef="Assign_26">
                       <Assign.To>
                         <OutArgument x:TypeArguments="sd:DataRow">[RealCurrentRow]</OutArgument>
                       </Assign.To>
@@ -486,8 +486,8 @@
                         <OutArgument x:TypeArguments="x:String">[item_name]</OutArgument>
                       </ui:GetRowItem.Value>
                     </ui:GetRowItem>
-                    <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="542,117" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[&quot;Row lưu trong log: &quot; + arg_CurrentRowNumberOut.ToString &amp; vbNewLine &amp;&#xA;&quot;Số Rows của Table hiện tại: &quot; + TableRows.ToString]" />
-                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="Click 'Mới'" sap:VirtualizedContainerService.HintSize="542,225" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6fd45075-60dd-4128-9292-e7ee2c1b3a20" Version="V3">
+                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="638,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Row lưu trong log: &quot; + arg_CurrentRowNumberOut.ToString &amp; vbNewLine &amp;&#xD;&#xA;&quot;Số Rows của Table hiện tại: &quot; + TableRows.ToString]" />
+                    <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="False" DisplayName="Click 'Mới'" sap:VirtualizedContainerService.HintSize="638,225" sap2010:WorkflowViewState.IdRef="NClick_33" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="6fd45075-60dd-4128-9292-e7ee2c1b3a20" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable DesignTimeRectangle="359, 70, 21, 20" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='Mới' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='Mới' role='text' automationid='' check:text='Mới' /&gt;" Guid="5c11c391-50f9-4246-9dcf-f18159b318f6" InformativeScreenshot="69f17c8b9642e584def9322dda63dd3b.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -508,7 +508,7 @@
                         </uix:VerifyExecutionOptions>
                       </uix:NClick.VerifyOptions>
                     </uix:NClick>
-                    <If Condition="[PhanLoai = &quot;FG (Finished Good)&quot; AND arg_CurrentRowNumberOut = 0]" sap:VirtualizedContainerService.HintSize="638,1560" sap2010:WorkflowViewState.IdRef="If_15">
+                    <If Condition="[PhanLoai = &quot;FG (Finished Good)&quot; AND arg_CurrentRowNumberOut = 0]" sap:VirtualizedContainerService.HintSize="638,1528" sap2010:WorkflowViewState.IdRef="If_15">
                       <If.Then>
                         <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,695" sap2010:WorkflowViewState.IdRef="Sequence_59">
                           <sap:WorkflowViewStateService.ViewState>
@@ -1320,7 +1320,7 @@
                                                   <uix:NSelectItem.Target>
                                                     <uix:TargetAnchorable CVScreenId="1a99dad2-739c-43ef-9258-7a4088d76bd0" CvElementArea="16, 45, 149, 35" CvType="InputBox" DesignTimeRectangle="15, 45, 150, 35" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;ctrl idx='2' role='combo box' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='' role='combo box' /&gt;" Guid="66b3ea08-9658-49a0-a95e-42205ce0a949" InformativeScreenshot="747cf7453194491be58ea6a5174a470f.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='BOM품번' /&gt;" SearchSteps="FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                       <uix:TargetAnchorable.Anchors>
-                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
                                                           <uix:Target DesignTimeRectangle="165, 45, 30, 35" ElementType="CheckBox" FullSelectorArgument="&lt;ctrl automationid='Check1' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='Check1' role='check box' /&gt;" Guid="e97e5768-3e32-4633-8222-5dbc33e394af" SearchSteps="Selector, FuzzySelector" />
                                                         </scg:List>
                                                       </uix:TargetAnchorable.Anchors>

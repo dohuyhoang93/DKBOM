@@ -6,7 +6,7 @@ setlocal ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
 set "LOCK_FILE=%USERPROFILE%\Documents\LogUiPath\STATUS.lock"
 set "INPUTJSON=%USERPROFILE%\Documents\LogUiPath\input.json"
 set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
-set "PROJECT_PATH=%USERPROFILE%\Documents\DKBOM.1.7.9.nupkg"
+set "PROJECT_PATH=%USERPROFILE%\Documents\DKBOM.1.7.10.nupkg"
 
 set "MAX_RETRY=3"
 set /a WAIT_SECONDS=120
