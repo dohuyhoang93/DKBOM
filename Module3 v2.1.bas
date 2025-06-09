@@ -99,7 +99,7 @@ Sub Run()
                 If k = 1 Then
                     ' newWs.Cells(k + 1, 12).Value = ""
                 Else
-                    newWs.Cells(k + 1, 14).Value = newWs.Cells(k, 4).Value
+                    ' newWs.Cells(k + 1, 14).Value = newWs.Cells(k, 4).Value
                     newWs.Cells(k + 1, 15).Value = "1"
                 End If
             Next k
@@ -113,7 +113,7 @@ Sub Run()
                 newWs.Cells(lastRow, 1).Value = productName
                 newWs.Cells(lastRow, 2).Value = phanLoai
                 newWs.Cells(lastRow, 5).Value = itemCode
-                newWs.Cells(lastRow, 14).Value = newWs.Cells(lastRow - 1, 4).Value
+                ' newWs.Cells(lastRow, 14).Value = newWs.Cells(lastRow - 1, 4).Value
                 newWs.Cells(lastRow, 15).Value = "1"
 
             End If
