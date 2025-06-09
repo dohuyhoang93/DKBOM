@@ -4,6 +4,7 @@ Sub Run()
     Dim newWs As Worksheet
     Dim productName As String
     Dim phanLoai As String
+    Dim itemCode As String
     Dim cleanProductCode As String
     Dim lastRow As Long
     Dim stepsCount As Integer
@@ -26,7 +27,7 @@ Sub Run()
     ' Loop through cells with values in column 1
     For i = 2 To lastRow
         productName = ws.Cells(i, 1).Value
-        phanLoai = ws.Cells(i, 2).Value
+        phanLoai = ws.Cells(i, 3).Value
         If productName <> "" Then
             ' Clean the product name to remove invalid characters and limit the length
             cleanProductName = CleanSheetName(productName)
@@ -45,17 +46,18 @@ Sub Run()
             newWs.Cells(1, 2).Value = "Phan loai"
             newWs.Cells(1, 3).Value = "Step name"
             newWs.Cells(1, 4).Value = "Item name"
-            newWs.Cells(1, 5).Value = "Don vi tieu chuan"
-            newWs.Cells(1, 6).Value = "Muc dich SX"
-            newWs.Cells(1, 7).Value = "Ma code KH"
-            newWs.Cells(1, 8).Value = "Phan loai nho"
-            newWs.Cells(1, 9).Value = "Kho xuat"
-            newWs.Cells(1, 10).Value = "Kho nhap"
-            newWs.Cells(1, 11).Value = "Work center"
-            newWs.Cells(1, 12).Value = "Time"
+            newWs.Cells(1, 5).Value = "Item code"
+            newWs.Cells(1, 6).Value = "Don vi tieu chuan"
+            newWs.Cells(1, 7).Value = "Muc dich SX"
+            newWs.Cells(1, 8).Value = "Ma code KH"
+            newWs.Cells(1, 9).Value = "Phan loai nho"
+            newWs.Cells(1, 10).Value = "Kho xuat"
+            newWs.Cells(1, 11).Value = "Kho nhap"
+            newWs.Cells(1, 12).Value = "Work center"
+            newWs.Cells(1, 13).Value = "Time"
             
             ' Tao 30 cap cot "Sub Material" & "Sub Material Unit"
-            col = 13
+            col = 14
             Dim pairIndex As Integer
             For pairIndex = 1 To 30
                 newWs.Cells(1, col).Value = "Sub Material " & pairIndex
@@ -85,34 +87,34 @@ Sub Run()
                 newWs.Cells(k + 1, 2).Value = phanLoai
                 newWs.Cells(k + 1, 3).Value = stepName
                 newWs.Cells(k + 1, 4).Value = productName & "-" & stepSymbol
-                newWs.Cells(k + 1, 5).Value = ws.Cells(i, 4).Value 'Don vi tieu chuan
-                newWs.Cells(k + 1, 6).Value = ws.Cells(i, 5).Value 'Muc dich SX
-                newWs.Cells(k + 1, 7).Value = ws.Cells(i, 6).Value 'Ma code KH
-                newWs.Cells(k + 1, 8).Value = ws.Cells(i, 7).Value 'Phan loai nho
-                newWs.Cells(k + 1, 9).Value = khoXuat
-                newWs.Cells(k + 1, 10).Value = khoNhap
-                newWs.Cells(k + 1, 11).Value = workCenter
+                newWs.Cells(k + 1, 6).Value = ws.Cells(i, 4).Value 'Don vi tieu chuan
+                newWs.Cells(k + 1, 7).Value = ws.Cells(i, 5).Value 'Muc dich SX
+                newWs.Cells(k + 1, 8).Value = ws.Cells(i, 6).Value 'Ma code KH
+                newWs.Cells(k + 1, 9).Value = ws.Cells(i, 7).Value 'Phan loai nho
+                newWs.Cells(k + 1, 10).Value = khoXuat
+                newWs.Cells(k + 1, 11).Value = khoNhap
+                newWs.Cells(k + 1, 12).Value = workCenter
                 
                 ' Map Sub Material 1 from previous item code
                 If k = 1 Then
                     ' newWs.Cells(k + 1, 12).Value = ""
                 Else
-                    newWs.Cells(k + 1, 13).Value = newWs.Cells(k, 4).Value
-                    newWs.Cells(k + 1, 14).Value = "1"
+                    newWs.Cells(k + 1, 14).Value = newWs.Cells(k, 4).Value
+                    newWs.Cells(k + 1, 15).Value = "1"
                 End If
             Next k
 
             ' Xu ly voi hang Finished Goood
-            If ws.Cells(i, 2).Value = "FG (Finished Good)" Then
+            If ws.Cells(i, 3).Value = "FG (Finished Good)" Then
                 ' lastRow = newWs.Cells(newWs.Rows.Count, 1).End(xlUp).Row + 1 ' Xac dinh dong moi
                 lastRow = k + 1
-                stepName = ws.Cells(i, 3).Value
+                itemCode = ws.Cells(i, 2).Value
                 ' Them dong moi
                 newWs.Cells(lastRow, 1).Value = productName
                 newWs.Cells(lastRow, 2).Value = phanLoai
-                newWs.Cells(lastRow, 4).Value = stepName
-                newWs.Cells(lastRow, 13).Value = newWs.Cells(lastRow - 1, 4).Value
-                newWs.Cells(lastRow, 14).Value = "1"
+                newWs.Cells(lastRow, 5).Value = itemCode
+                newWs.Cells(lastRow, 14).Value = newWs.Cells(lastRow - 1, 4).Value
+                newWs.Cells(lastRow, 15).Value = "1"
 
             End If
             
@@ -200,7 +202,7 @@ Sub CreateDropdowns(ByVal newWs As Worksheet, ByVal stepsCount As Integer)
     ' Danh sach Work Center
     Set ws = Worksheets("Danh Sach Work Center")
     lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
-    With newWs.Range("K2:K" & stepsCount + 2).Validation
+    With newWs.Range("L2:L" & stepsCount + 2).Validation
         .Delete
         .Add Type:=xlValidateList, AlertStyle:=xlValidAlertStop, Operator:= _
         xlBetween, Formula1:="='Danh Sach Work Center'!$A$2:$A$" & lastRow
@@ -213,7 +215,7 @@ Sub CreateDropdowns(ByVal newWs As Worksheet, ByVal stepsCount As Integer)
     ' Danh sach Kho xuat
     Set ws = Worksheets("Danh Sach Kho")
     lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
-    With newWs.Range("J2:J" & stepsCount + 2).Validation
+    With newWs.Range("K2:K" & stepsCount + 2).Validation
         .Delete
         .Add Type:=xlValidateList, AlertStyle:=xlValidAlertStop, Operator:= _
         xlBetween, Formula1:="='Danh Sach Kho'!$A$2:$A$" & lastRow
@@ -226,7 +228,7 @@ Sub CreateDropdowns(ByVal newWs As Worksheet, ByVal stepsCount As Integer)
     ' Danh s�ch Kho nhap
     Set ws = Worksheets("Danh Sach Kho")
     lastRow = ws.Cells(ws.Rows.Count, 1).End(xlUp).Row
-    With newWs.Range("I2:I" & stepsCount + 2).Validation
+    With newWs.Range("J2:J" & stepsCount + 2).Validation
         .Delete
         .Add Type:=xlValidateList, AlertStyle:=xlValidAlertStop, Operator:= _
         xlBetween, Formula1:="='Danh Sach Kho'!$A$2:$A$" & lastRow
