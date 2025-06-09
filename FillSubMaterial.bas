@@ -12,7 +12,7 @@ Sub FillSubMaterial1()
     ' Vòng lặp từ dòng 2 đến dòng cuối
     For i = 2 To lastRow
         If i = 2 Then
-            ws.Cells(i, "N").Value = "" ' Bỏ qua dòng 2
+            ' Bỏ qua dòng 2
         Else
             ws.Cells(i, "N").Value = ws.Cells(i - 1, "E").Value ' Gán N(i) = E(i - 1)
         End If

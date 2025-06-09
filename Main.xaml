@@ -143,7 +143,7 @@
       <x:Boolean x:Key="ShouldCollapseAll">False</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart sap:VirtualizedContainerService.HintSize="1181,834.04" sap2010:WorkflowViewState.IdRef="Flowchart_3">
+  <Flowchart sap:VirtualizedContainerService.HintSize="1143,834.04" sap2010:WorkflowViewState.IdRef="Flowchart_3">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -160,7 +160,7 @@
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">175,145</av:Point>
           <av:Size x:Key="ShapeSize">110,70</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">285,180 1090,180</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">285,180 850,180</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Workflow1 - Invoke Workflow File (Workflow1.xaml)" sap:VirtualizedContainerService.HintSize="337,172" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="Workflow1.xaml">
@@ -191,7 +191,7 @@
         <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_2">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">1090,140</av:Point>
+              <av:Point x:Key="ShapeLocation">850,140</av:Point>
               <av:Size x:Key="ShapeSize">120,80</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
