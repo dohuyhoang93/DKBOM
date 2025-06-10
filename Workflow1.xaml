@@ -324,7 +324,7 @@
           <av:PointCollection x:Key="ConnectorLocation">1410,125 1410,155 1040,155 1040,260</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Đăng ký Item" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Đăng ký Item" sap:VirtualizedContainerService.HintSize="1452.0000000000002,30502" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="AllSheetsBoQua_DKItem" />
           <Variable x:TypeArguments="s:String[]" Name="ProcessedSheetsArrayOut_DKItem" />
@@ -1310,7 +1310,7 @@
                                                                       <OutArgument x:TypeArguments="x:String">[CurrentCellIndex]</OutArgument>
                                                                     </Assign.To>
                                                                     <Assign.Value>
-                                                                      <InArgument x:TypeArguments="x:String">[UiPath.Excel.Helpers.ExcelUtilities.ConvertColumnIndexToColumnLetter(DataTable.Columns.IndexOf(“Item code”)+1).ToString &amp; (TableRows + 1 - CurrentRowNumberOut_DKItem).ToString]</InArgument>
+                                                                      <InArgument x:TypeArguments="x:String">[UiPath.Excel.Helpers.ExcelUtilities.ConvertColumnIndexToColumnLetter(DataTable.Columns.IndexOf("Item code")+1).ToString &amp; (TableRows + 1 - CurrentRowNumberOut_DKItem).ToString]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
                                                                   <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="470,177" sap2010:WorkflowViewState.IdRef="LogMessage_70" Level="Info" Message="[&quot;Write Item code value: &quot; &amp; ItemCode &amp; vbNewLine &amp;&#xA;&quot;To Excel Cell: &quot; &amp; CurrentCellIndex]" />
@@ -2303,7 +2303,7 @@
                                                                   <OutArgument x:TypeArguments="x:String">[CurrentCellIndex]</OutArgument>
                                                                 </Assign.To>
                                                                 <Assign.Value>
-                                                                  <InArgument x:TypeArguments="x:String">[UiPath.Excel.Helpers.ExcelUtilities.ConvertColumnIndexToColumnLetter(DataTable.Columns.IndexOf(“Item code”)+1).ToString &amp; (TableRows + 1 - CurrentRowNumberOut_DKItem).ToString]</InArgument>
+                                                                  <InArgument x:TypeArguments="x:String">[UiPath.Excel.Helpers.ExcelUtilities.ConvertColumnIndexToColumnLetter(DataTable.Columns.IndexOf("Item code")+1).ToString &amp; (TableRows + 1 - CurrentRowNumberOut_DKItem).ToString]</InArgument>
                                                                 </Assign.Value>
                                                               </Assign>
                                                               <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="470,177" sap2010:WorkflowViewState.IdRef="LogMessage_72" Level="Info" Message="[&quot;Write Item code value: &quot; &amp; ItemCode &amp; vbNewLine &amp;&#xA;&quot;To Excel Cell: &quot; &amp; CurrentCellIndex]" />
@@ -3865,7 +3865,7 @@
                                                                         <OutArgument x:TypeArguments="x:String">[step_name]</OutArgument>
                                                                       </ui:GetRowItem.Value>
                                                                     </ui:GetRowItem>
-                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[&quot;Current Row Index: &quot; &amp; CurrentRowIndex &amp; vbNewLine &amp;&#xD;&#xA;&quot;Item Code: &quot; &amp; ItemCode &amp; vbNewLine &amp;&#xD;&#xA;&quot;Step name: &quot; &amp; step_name]" />
+                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[&quot;Current Row Index: &quot; &amp; CurrentRowIndex &amp; vbNewLine &amp;&#xA;&quot;Item Code: &quot; &amp; ItemCode &amp; vbNewLine &amp;&#xA;&quot;Step name: &quot; &amp; step_name]" />
                                                                     <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_79" Text="[ItemCode]" />
                                                                     <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_276" ScopeIdentifier="e36b5f33-f4d1-43b4-8244-6b1696b8bb54" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Right)][u(hk)]" Version="V3">
                                                                       <uix:NKeyboardShortcuts.Target>
@@ -6213,7 +6213,7 @@
               <av:Point x:Key="ShapeLocation">420,310</av:Point>
               <av:Size x:Key="ShapeSize">60,60</av:Size>
               <av:PointCollection x:Key="TrueConnector">450,370 450,400 460,400 460,565</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">480,340 510,340 510,50 625,50</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">480,340 540.4455270150579,340 540.4455270150579,50 625,50</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </FlowDecision>
