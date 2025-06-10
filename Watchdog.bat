@@ -11,8 +11,8 @@ set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"
 set "PROJECT_PATH_SEARCH=%USERPROFILE%\Documents\*.nupkg"
 set "PROJECT_PATH="
 set "MAX_RETRY=3"
-set /a WAIT_SECONDS=120
-set /a WAIT_SECONDS_EXIT_FILE=30
+set /a WAIT_SECONDS=240
+set /a WAIT_SECONDS_EXIT_FILE=45
 set /a RETRY_COUNT=0
 set "PREV_FILETIME="
 call :SEARCH_NUPKG
@@ -29,7 +29,7 @@ call :done
 :: === MAIN VÒNG LẶP WATCHDOG ===
 :RETRY_LOOP
 echo [~] Watchdog is running
-echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây...
+echo [.] Đợi %WAIT_SECONDS_EXIT_FILE% giây để UiPath khởi tạo...
 
 timeout /t %WAIT_SECONDS_EXIT_FILE% /nobreak >nul
 
