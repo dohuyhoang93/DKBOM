@@ -1,4 +1,4 @@
-#  Hướng dẫn cài đặt ban đầu
+# <span style="color: #39ff14; text-shadow: 0 0 3px #39ff14, 0 0 6px #39ff14, 0 0 10px #39ff14; font-weight: bold;"><strong>HƯỚNG DẪN CÀI ĐẶT</strong></span><br>
 ## 1. Nhập thông tin đăng nhập Ksystem trong gói file cài đặt:
 - Tải về file: `zip` của dự án. Mở UiPath studio và publish dự án sang file `DK.BOM.*.*.*.nupkg`.<br>
 - Lưu file `.nupkg` này tại thư mục `Documents` chính *(C:\Users\username\Documents\)*. **Đây là bắt buộc.**
