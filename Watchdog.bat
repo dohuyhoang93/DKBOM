@@ -19,7 +19,7 @@ call :SEARCH_NUPKG
 
 echo [*] Watchdog initial complete
 
-call :section "Watchdog running"
+call :section "Watchdog Running ..."
 
 echo [~] Đang khởi chạy tiến trình UiPath lần đầu...
 start "run uipath" /b "%UIPATH_EXE%" execute --file "%PROJECT_PATH%"
@@ -49,6 +49,18 @@ timeout /t %WAIT_SECONDS% /nobreak >nul
 if not exist "%LOCK_FILE%" (
     echo [*] File lock đã bị xóa. Khởi động lại UiPath...
     goto :RESTART_UIPATH
+)
+
+:: Đọc dòng đầu tiên của file .lock vào biến STATUS
+set /p STATUS=<"%LOCK_FILE%"
+
+:: So sánh và exit nếu nội dung là FINISH
+if /i "%STATUS%"=="FINISH" (
+    echo [*] Tiến trình UiPath đã hoàn tất.
+    call :done
+    call :section "Watchdog Exiting"
+    pause
+    exit
 )
 
 call :GET_FILE_MODTIME
