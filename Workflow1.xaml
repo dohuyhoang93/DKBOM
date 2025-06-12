@@ -295,7 +295,7 @@
       <x:Boolean x:Key="ShouldExpandAll">True</x:Boolean>
     </scg:Dictionary>
   </sap:WorkflowViewStateService.ViewState>
-  <Flowchart DisplayName="Workflow1" sap:VirtualizedContainerService.HintSize="1143,834.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart DisplayName="Workflow1" sap:VirtualizedContainerService.HintSize="1149,834.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="njl:JObject" Name="JsonObject" />
       <Variable x:TypeArguments="x:String" Name="var_exit" />
@@ -324,7 +324,7 @@
           <av:PointCollection x:Key="ConnectorLocation">1410,125 1410,155 1040,155 1040,260</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Đăng ký Item" sap:VirtualizedContainerService.HintSize="1452.0000000000002,30502" sap2010:WorkflowViewState.IdRef="Sequence_1">
+      <Sequence DisplayName="Đăng ký Item" sap:VirtualizedContainerService.HintSize="1452,23020" sap2010:WorkflowViewState.IdRef="Sequence_1">
         <Sequence.Variables>
           <Variable x:TypeArguments="s:String[]" Name="AllSheetsBoQua_DKItem" />
           <Variable x:TypeArguments="s:String[]" Name="ProcessedSheetsArrayOut_DKItem" />
@@ -353,7 +353,7 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <Sequence DisplayName="Đăng_ký_Item" sap:VirtualizedContainerService.HintSize="1418,30442" sap2010:WorkflowViewState.IdRef="Sequence_521">
+        <Sequence DisplayName="Đăng_ký_Item" sap:VirtualizedContainerService.HintSize="1418,22960" sap2010:WorkflowViewState.IdRef="Sequence_521">
           <Sequence.Variables>
             <Variable x:TypeArguments="x:Int32" Name="i" />
             <Variable x:TypeArguments="x:String" Name="SheetNameTemp" />
@@ -367,38 +367,38 @@
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="1384,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="RUNNING" />
-          <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1384,30192" sap2010:WorkflowViewState.IdRef="SequenceX_13">
+          <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="1384,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_1" Text="RUNNING" />
+          <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1384,22712" sap2010:WorkflowViewState.IdRef="SequenceX_13">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1350,30109" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_13">
+            <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1350,22629" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_13">
               <ueab:ExcelProcessScopeX.Body>
                 <ActivityAction x:TypeArguments="ui:IExcelProcess">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1316,29999" sap2010:WorkflowViewState.IdRef="Sequence_536">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1316,22519" sap2010:WorkflowViewState.IdRef="Sequence_536">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1282,29939" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_13" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[exel_file_locate_arg]">
+                    <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1282,22459" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_13" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[exel_file_locate_arg]">
                       <ueab:ExcelApplicationCard.Body>
                         <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                           <ActivityAction.Argument>
                             <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelSheet" />
                           </ActivityAction.Argument>
-                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1248,29643" sap2010:WorkflowViewState.IdRef="Sequence_535">
+                          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1248,22167" sap2010:WorkflowViewState.IdRef="Sequence_535">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Set Variable Value - Nhập các Sheet không lấy data" sap:VirtualizedContainerService.HintSize="1214,115" sap2010:WorkflowViewState.IdRef="Assign_163">
+                            <Assign DisplayName="Set Variable Value - Nhập các Sheet không lấy data" sap:VirtualizedContainerService.HintSize="1214,114" sap2010:WorkflowViewState.IdRef="Assign_163">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="s:String[]">[TenSheetBoQua]</OutArgument>
                               </Assign.To>
@@ -406,7 +406,7 @@
                                 <InArgument x:TypeArguments="s:String[]">[{"Run","Danh Sach Cong Doan","Danh Sach Kho", "Danh Sach Work Center", "Nhap Lieu"}]</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign sap:VirtualizedContainerService.HintSize="1214,115" sap2010:WorkflowViewState.IdRef="Assign_180">
+                            <Assign sap:VirtualizedContainerService.HintSize="1214,114" sap2010:WorkflowViewState.IdRef="Assign_180">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
                               </Assign.To>
@@ -423,9 +423,9 @@
                                 <InOutArgument x:TypeArguments="x:String" x:Key="out_ErrorMessage">[ErrorMessageOut_DKItem]</InOutArgument>
                               </ui:InvokeCode.Arguments>
                             </ui:InvokeCode>
-                            <If Condition="[string.IsNullOrEmpty(CurrentSheetNameOut_DKItem) = true]" sap:VirtualizedContainerService.HintSize="1214,14231" sap2010:WorkflowViewState.IdRef="If_66">
+                            <If Condition="[string.IsNullOrEmpty(CurrentSheetNameOut_DKItem) = true]" sap:VirtualizedContainerService.HintSize="1214,6760" sap2010:WorkflowViewState.IdRef="If_66">
                               <If.Then>
-                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1212,90" sap2010:WorkflowViewState.IdRef="Sequence_584">
+                                <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1212,89" sap2010:WorkflowViewState.IdRef="Sequence_584">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -434,13 +434,13 @@
                                 </Sequence>
                               </If.Then>
                               <If.Else>
-                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1212,14002" sap2010:WorkflowViewState.IdRef="Sequence_569">
+                                <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1212,6533" sap2010:WorkflowViewState.IdRef="Sequence_569">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1178,13942" sap2010:WorkflowViewState.IdRef="ForEachSheetX_14" Workbook="[ExcelSheet]">
+                                  <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1178,6473" sap2010:WorkflowViewState.IdRef="ForEachSheetX_14" Workbook="[ExcelSheet]">
                                     <ueab:ForEachSheetX.Body>
                                       <ActivityAction x:TypeArguments="ue:WorksheetQuickHandle, x:Int32">
                                         <ActivityAction.Argument1>
@@ -449,7 +449,7 @@
                                         <ActivityAction.Argument2>
                                           <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                         </ActivityAction.Argument2>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1144,13752" sap2010:WorkflowViewState.IdRef="Sequence_570">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1144,6286" sap2010:WorkflowViewState.IdRef="Sequence_570">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:String" Name="arg_CurrentSheet" />
                                           </Sequence.Variables>
@@ -458,10 +458,10 @@
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="1110,113" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_15" Index="[CurrentIndex - 1]" Sheet="[arg_CurrentSheetName]" />
-                                          <If Condition="[CurrentSheetNameOut_DKItem &lt;&gt; arg_CurrentSheetName]" sap:VirtualizedContainerService.HintSize="1110,13579" sap2010:WorkflowViewState.IdRef="If_69">
+                                          <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="1110,112" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_15" Index="[CurrentIndex - 1]" Sheet="[arg_CurrentSheetName]" />
+                                          <If Condition="[CurrentSheetNameOut_DKItem &lt;&gt; arg_CurrentSheetName]" sap:VirtualizedContainerService.HintSize="1110,6114" sap2010:WorkflowViewState.IdRef="If_69">
                                             <If.Then>
-                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1108,90" sap2010:WorkflowViewState.IdRef="Sequence_585">
+                                              <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="1108,89" sap2010:WorkflowViewState.IdRef="Sequence_585">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -470,13 +470,13 @@
                                               </Sequence>
                                             </If.Then>
                                             <If.Else>
-                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1108,13359" sap2010:WorkflowViewState.IdRef="Sequence_574">
+                                              <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="1108,5896" sap2010:WorkflowViewState.IdRef="Sequence_574">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Sequence DisplayName="Sequence : Thao tac dk item tung sheet" sap:VirtualizedContainerService.HintSize="1074,13251" sap2010:WorkflowViewState.IdRef="Sequence_577">
+                                                <Sequence DisplayName="Sequence : Thao tac dk item tung sheet" sap:VirtualizedContainerService.HintSize="1074,5788" sap2010:WorkflowViewState.IdRef="Sequence_577">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -549,7 +549,7 @@
                                                       <OutArgument x:TypeArguments="x:String">[PhanLoai]</OutArgument>
                                                     </ui:GetRowItem.Value>
                                                   </ui:GetRowItem>
-                                                  <If Condition="[PhanLoai = &quot;FG (Finished Good)&quot;]" sap:VirtualizedContainerService.HintSize="1040,395" sap2010:WorkflowViewState.IdRef="If_71">
+                                                  <If Condition="[PhanLoai = &quot;FG (Finished Good)&quot;]" sap:VirtualizedContainerService.HintSize="1040,394" sap2010:WorkflowViewState.IdRef="If_71">
                                                     <If.Then>
                                                       <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="468,166" sap2010:WorkflowViewState.IdRef="Sequence_575">
                                                         <Sequence.Variables>
@@ -580,21 +580,21 @@
                                                       </Sequence>
                                                     </If.Else>
                                                   </If>
-                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ" sap:VirtualizedContainerService.HintSize="1040,11024" sap2010:WorkflowViewState.IdRef="NApplicationCard_117" ScopeGuid="69fc89e4-1df2-4516-bb91-75601a6a7623" Version="V2">
+                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ" sap:VirtualizedContainerService.HintSize="1040,3562" sap2010:WorkflowViewState.IdRef="NApplicationCard_117" ScopeGuid="69fc89e4-1df2-4516-bb91-75601a6a7623" Version="V2">
                                                     <uix:NApplicationCard.Body>
                                                       <ActivityAction x:TypeArguments="x:Object">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,10699" sap2010:WorkflowViewState.IdRef="Sequence_595">
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,3239" sap2010:WorkflowViewState.IdRef="Sequence_595">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <uix:NCheckState DisplayName="Check App State 'CÔNG TY'" sap:VirtualizedContainerService.HintSize="972,1496" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="69fc89e4-1df2-4516-bb91-75601a6a7623" Timeout="2" Version="V3">
+                                                          <uix:NCheckState DisplayName="Check App State 'CÔNG TY'" sap:VirtualizedContainerService.HintSize="972,1489" sap2010:WorkflowViewState.IdRef="NCheckState_11" ScopeIdentifier="69fc89e4-1df2-4516-bb91-75601a6a7623" Timeout="2" Version="V3">
                                                             <uix:NCheckState.IfExists>
-                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_589">
+                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_589">
                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -603,7 +603,7 @@
                                                               </Sequence>
                                                             </uix:NCheckState.IfExists>
                                                             <uix:NCheckState.IfNotExists>
-                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,1245" sap2010:WorkflowViewState.IdRef="Sequence_576">
+                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,1240" sap2010:WorkflowViewState.IdRef="Sequence_576">
                                                                 <Sequence.Variables>
                                                                   <Variable x:TypeArguments="x:String" Name="identicationText" />
                                                                   <Variable x:TypeArguments="x:String" Name="id" />
@@ -614,8 +614,8 @@
                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                   </scg:Dictionary>
                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                <ui:ReadTextFile File="{x:Null}" Content="[identicationText]" DisplayName="Read Text File" FileName="KsystemIdentication.txt" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="ReadTextFile_11" />
-                                                                <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_194">
+                                                                <ui:ReadTextFile File="{x:Null}" Content="[identicationText]" DisplayName="Read Text File" FileName="KsystemIdentication.txt" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_11" />
+                                                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_194">
                                                                   <Assign.To>
                                                                     <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
                                                                   </Assign.To>
@@ -623,7 +623,7 @@
                                                                     <InArgument x:TypeArguments="x:String">[identicationText.Split(Environment.NewLine.ToCharArray, StringSplitOptions.RemoveEmptyEntries)(0).Split(":"c)(1).Trim()]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
-                                                                <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_195">
+                                                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_195">
                                                                   <Assign.To>
                                                                     <OutArgument x:TypeArguments="x:String">[password]</OutArgument>
                                                                   </Assign.To>
@@ -631,8 +631,8 @@
                                                                     <InArgument x:TypeArguments="x:String">[identicationText.Split(Environment.NewLine.ToCharArray, StringSplitOptions.RemoveEmptyEntries)(1).Split(":"c)(1).Trim()]</InArgument>
                                                                   </Assign.Value>
                                                                 </Assign>
-                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="MessageBox_69" Text="[&quot;id: &quot; +id +&quot;|&quot;+&quot;password: &quot;+ password]" />
-                                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="False" DisplayName="Type Into 'ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,251" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="69fc89e4-1df2-4516-bb91-75601a6a7623" Text="[id]" Version="V3">
+                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="MessageBox_69" Text="[&quot;id: &quot; +id +&quot;|&quot;+&quot;password: &quot;+ password]" />
+                                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" ContinueOnError="False" DisplayName="Type Into 'ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_21" ScopeIdentifier="69fc89e4-1df2-4516-bb91-75601a6a7623" Text="[id]" Version="V3">
                                                                   <uix:NTypeInto.Target>
                                                                     <uix:TargetAnchorable CVScreenId="5f045960-61ad-4d2f-a5d4-4ea4a7aa2cc9" CvElementArea="450, 138, 101, 26" CvType="InputBox" DesignTimeRectangle="450, 140, 100, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='txtID' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtID' role='editable text' /&gt;" Guid="d1c83305-a142-4309-8a08-0e08a9a3d782" InformativeScreenshot="480a14090d81c40b25afcd9e746dd3cd.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='FrmMainSplash' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                       <uix:TargetAnchorable.Anchors>
@@ -797,7 +797,7 @@
                                                               </ui:Target>
                                                             </ui:Click.Target>
                                                           </ui:Click>
-                                                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="True" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="972,249" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_230" Shortcuts="[d(hk)][k(esc)][u(hk)]" Timeout="2" Version="V3">
+                                                          <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" ContinueOnError="True" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="972,247" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_230" Shortcuts="[d(hk)][k(esc)][u(hk)]" Timeout="2" Version="V3">
                                                             <uix:NKeyboardShortcuts.VerifyOptions>
                                                               <uix:VerifyExecutionOptions DisplayName="{x:Null}" Mode="Appears">
                                                                 <uix:VerifyExecutionOptions.Retry>
@@ -831,7 +831,7 @@
                                                               </ui:Target>
                                                             </ui:Click.Target>
                                                           </ui:Click>
-                                                          <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Đăng ký Item'" sap:VirtualizedContainerService.HintSize="972,227" sap2010:WorkflowViewState.IdRef="NClick_103" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="69fc89e4-1df2-4516-bb91-75601a6a7623" Timeout="2" Version="V3">
+                                                          <uix:NClick ActivateBefore="True" ClickType="Single" ContinueOnError="True" DisplayName="Click 'Đăng ký Item'" sap:VirtualizedContainerService.HintSize="972,225" sap2010:WorkflowViewState.IdRef="NClick_103" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="69fc89e4-1df2-4516-bb91-75601a6a7623" Timeout="2" Version="V3">
                                                             <uix:NClick.Target>
                                                               <uix:TargetAnchorable CVScreenId="3838e561-dbe2-4296-be73-17763899fa97" CvTextArea="88, 129, 69, 14" CvTextArgument="Dang ky Item" CvType="Text" DesignTimeRectangle="89, 127, 67, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:16' role='outline item' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:0' role='outline item' /&gt;&lt;ctrl name='Đăng ký Item' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:16' role='outline item' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:0' role='outline item' /&gt;&lt;ctrl name='Đăng ký Item' role='text' automationid='' check:text='Đăng ký Item' /&gt;" Guid="9939998c-2a79-46c2-9189-c97fccde3b46" ImageBase64="" InformativeScreenshot="32396e455a4eeb4c37b4995131e76e8b.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                 <uix:TargetAnchorable.Anchors>
@@ -852,13 +852,13 @@
                                                               </uix:VerifyExecutionOptions>
                                                             </uix:NClick.VerifyOptions>
                                                           </uix:NClick>
-                                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="972,7531" sap2010:WorkflowViewState.IdRef="ForEachRow_29">
+                                                          <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="506,7486" sap2010:WorkflowViewState.IdRef="ForEachRow_29">
                                                             <ui:ForEachRow.Body>
                                                               <ActivityAction x:TypeArguments="sd:DataRow">
                                                                 <ActivityAction.Argument>
                                                                   <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                                 </ActivityAction.Argument>
-                                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,7356" sap2010:WorkflowViewState.IdRef="Sequence_594">
+                                                                <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="504,7338" sap2010:WorkflowViewState.IdRef="Sequence_594">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -873,7 +873,7 @@
                                                                       <InOutArgument x:TypeArguments="x:String" x:Key="out_ErrorMessage">[ErrorMessageOut_DKItem]</InOutArgument>
                                                                     </ui:InvokeCode.Arguments>
                                                                   </ui:InvokeCode>
-                                                                  <If Condition="[TableRows -1 - CurrentRowNumberOut_DKItem &lt; 0]" sap:VirtualizedContainerService.HintSize="470,337" sap2010:WorkflowViewState.IdRef="If_77">
+                                                                  <If Condition="[TableRows -1 - CurrentRowNumberOut_DKItem &lt; 0]" sap:VirtualizedContainerService.HintSize="470,335" sap2010:WorkflowViewState.IdRef="If_77">
                                                                     <If.Then>
                                                                       <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_590">
                                                                         <sap:WorkflowViewStateService.ViewState>
@@ -885,7 +885,7 @@
                                                                       </Sequence>
                                                                     </If.Then>
                                                                     <If.Else>
-                                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90" sap2010:WorkflowViewState.IdRef="Sequence_591">
+                                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_591">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -894,7 +894,7 @@
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="470,115" sap2010:WorkflowViewState.IdRef="Assign_196">
+                                                                  <Assign sap:VirtualizedContainerService.HintSize="470,114" sap2010:WorkflowViewState.IdRef="Assign_196">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="sd:DataRow">[RealCurrentRow]</OutArgument>
                                                                     </Assign.To>
@@ -902,37 +902,37 @@
                                                                       <InArgument x:TypeArguments="sd:DataRow">[Datatable.Rows(TableRows - 1 - CurrentRowNumberOut_DKItem)]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Item name" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_154" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Item name" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_154" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[item_name]</OutArgument>
                                                                     </ui:GetRowItem.Value>
                                                                   </ui:GetRowItem>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Don vi tieu chuan" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_155" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Don vi tieu chuan" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_155" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[don_vi_tieu_chuan]</OutArgument>
                                                                     </ui:GetRowItem.Value>
                                                                   </ui:GetRowItem>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Phan loai nho" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_156" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Phan loai nho" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_156" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[phan_loai_nho]</OutArgument>
                                                                     </ui:GetRowItem.Value>
                                                                   </ui:GetRowItem>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Muc dich SX" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_157" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Muc dich SX" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_157" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[muc_dich_sx]</OutArgument>
                                                                     </ui:GetRowItem.Value>
                                                                   </ui:GetRowItem>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Ma code KH" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_158" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Ma code KH" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_158" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[ma_code_kh]</OutArgument>
                                                                     </ui:GetRowItem.Value>
                                                                   </ui:GetRowItem>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Kho xuat" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_159" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Kho xuat" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_159" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[kho_xuat]</OutArgument>
                                                                     </ui:GetRowItem.Value>
                                                                   </ui:GetRowItem>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Kho nhap" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,221" sap2010:WorkflowViewState.IdRef="GetRowItem_160" Row="[RealCurrentRow]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Kho nhap" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="470,219" sap2010:WorkflowViewState.IdRef="GetRowItem_160" Row="[RealCurrentRow]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[kho_nhap]</OutArgument>
                                                                     </ui:GetRowItem.Value>
@@ -959,7 +959,7 @@
                                                                       </ui:Target>
                                                                     </ui:Click.Target>
                                                                   </ui:Click>
-                                                                  <ui:SetValue AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" ContinueOnError="True" DisplayName="Set Text 'editable text  textBox1'" sap:VirtualizedContainerService.HintSize="470,188" sap2010:WorkflowViewState.IdRef="SetValue_104" Text="[item_name]">
+                                                                  <ui:SetValue AlterIfDisabled="{x:Null}" DelayAfter="{x:Null}" DelayBefore="{x:Null}" ContinueOnError="True" DisplayName="Set Text 'editable text  textBox1'" sap:VirtualizedContainerService.HintSize="470,187" sap2010:WorkflowViewState.IdRef="SetValue_104" Text="[item_name]">
                                                                     <ui:SetValue.Target>
                                                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="3a62cc31-9a59-4841-8d96-f23a5be4530d" InformativeScreenshot="c1e536ecf8a4f1e17a791415038445f7" Selector="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;&lt;ctrl automationid='textBox1' role='editable text' /&gt;">
                                                                         <ui:Target.TimeoutMS>
@@ -1413,13 +1413,13 @@
                                 </Sequence>
                               </If.Else>
                             </If>
-                            <Sequence DisplayName="Sequence - Iterator all sheet" sap:VirtualizedContainerService.HintSize="1214,14816" sap2010:WorkflowViewState.IdRef="Sequence_578">
+                            <Sequence DisplayName="Sequence - Iterator all sheet" sap:VirtualizedContainerService.HintSize="1214,14813" sap2010:WorkflowViewState.IdRef="Sequence_578">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1178,14724" sap2010:WorkflowViewState.IdRef="ForEachSheetX_15" Workbook="[ExcelSheet]">
+                              <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1178,14721" sap2010:WorkflowViewState.IdRef="ForEachSheetX_15" Workbook="[ExcelSheet]">
                                 <ueab:ForEachSheetX.Body>
                                   <ActivityAction x:TypeArguments="ue:WorksheetQuickHandle, x:Int32">
                                     <ActivityAction.Argument1>
@@ -2872,7 +2872,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">1400,525 1400,555 1040,555 1040,680</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="Đăng ký hàng theo công đoạn" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                      <Sequence DisplayName="Đăng ký hàng theo công đoạn" sap:VirtualizedContainerService.HintSize="1312,10816" sap2010:WorkflowViewState.IdRef="Sequence_48">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="x:String" Name="ErrorMessageOut_DKHTCD" />
                           <Variable x:TypeArguments="x:Int32" Name="CurrentRowNumberOut_DKHTCD" />
@@ -2893,33 +2893,33 @@
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="1278,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_6" Text="RUNNING" />
-                        <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1278,10299" sap2010:WorkflowViewState.IdRef="SequenceX_3">
+                        <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1278,10591" sap2010:WorkflowViewState.IdRef="SequenceX_3">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1244,10216" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1244,10508" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
                             <ueab:ExcelProcessScopeX.Body>
                               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                 <ActivityAction.Argument>
                                   <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                 </ActivityAction.Argument>
-                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1210,10106" sap2010:WorkflowViewState.IdRef="Sequence_80">
+                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1210,10398" sap2010:WorkflowViewState.IdRef="Sequence_80">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
-                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1176,9937" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[exel_file_locate_arg]">
+                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1176,10229" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_3" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[exel_file_locate_arg]">
                                     <ueab:ExcelApplicationCard.Body>
                                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                         <ActivityAction.Argument>
                                           <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelSheet" />
                                         </ActivityAction.Argument>
-                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1142,9636" sap2010:WorkflowViewState.IdRef="Sequence_79">
+                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1142,9928" sap2010:WorkflowViewState.IdRef="Sequence_79">
                                           <Sequence.Variables>
                                             <Variable x:TypeArguments="x:Int32" Name="counter" />
                                           </Sequence.Variables>
@@ -2945,7 +2945,7 @@
                                               <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                             </Assign.Value>
                                           </Assign>
-                                          <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1108,9348" sap2010:WorkflowViewState.IdRef="ForEachSheetX_3" Workbook="[ExcelSheet]">
+                                          <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1108,9640" sap2010:WorkflowViewState.IdRef="ForEachSheetX_3" Workbook="[ExcelSheet]">
                                             <ueab:ForEachSheetX.Body>
                                               <ActivityAction x:TypeArguments="ue:WorksheetQuickHandle, x:Int32">
                                                 <ActivityAction.Argument1>
@@ -2954,7 +2954,7 @@
                                                 <ActivityAction.Argument2>
                                                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                 </ActivityAction.Argument2>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1074,9161" sap2010:WorkflowViewState.IdRef="Sequence_78">
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1074,9453" sap2010:WorkflowViewState.IdRef="Sequence_78">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3051,13 +3051,13 @@
                                                       </Sequence>
                                                     </ui:CommentOut.Body>
                                                   </ui:CommentOut>
-                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="1040,8124" sap2010:WorkflowViewState.IdRef="NApplicationCard_121" ScopeGuid="e36b5f33-f4d1-43b4-8244-6b1696b8bb54" Version="V2">
+                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="1040,8416" sap2010:WorkflowViewState.IdRef="NApplicationCard_121" ScopeGuid="e36b5f33-f4d1-43b4-8244-6b1696b8bb54" Version="V2">
                                                     <uix:NApplicationCard.Body>
                                                       <ActivityAction x:TypeArguments="x:Object">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,7810" sap2010:WorkflowViewState.IdRef="Sequence_669">
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,8206" sap2010:WorkflowViewState.IdRef="Sequence_669">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3345,7 +3345,7 @@
                                                             </uix:NClick.VerifyOptions>
                                                           </uix:NClick>
                                                           <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="972,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_34" Range="[CurrentSheet]" SaveTo="[DataTable_DKHTCD]" />
-                                                          <Sequence DisplayName="Sequence (Logic for &quot;SF (Semi Finished Good Product&quot;)" sap:VirtualizedContainerService.HintSize="972,4250" sap2010:WorkflowViewState.IdRef="Sequence_681">
+                                                          <Sequence DisplayName="Sequence (Logic for &quot;SF (Semi Finished Good Product&quot;)" sap:VirtualizedContainerService.HintSize="972,4648" sap2010:WorkflowViewState.IdRef="Sequence_681">
                                                             <sap:WorkflowViewStateService.ViewState>
                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -3360,19 +3360,19 @@
                                                                 <InOutArgument x:TypeArguments="x:String" x:Key="out_ErrorMessage">[ErrorMessageOut_DKHTCD]</InOutArgument>
                                                               </ui:InvokeCode.Arguments>
                                                             </ui:InvokeCode>
-                                                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="587,936" sap2010:WorkflowViewState.IdRef="NApplicationCard_128" ScopeGuid="fa18db0d-6337-4799-a1d7-c5ae57291d0d" Version="V2">
+                                                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="587,976" sap2010:WorkflowViewState.IdRef="NApplicationCard_128" ScopeGuid="fa18db0d-6337-4799-a1d7-c5ae57291d0d" Version="V2">
                                                               <uix:NApplicationCard.Body>
                                                                 <ActivityAction x:TypeArguments="x:Object">
                                                                   <ActivityAction.Argument>
                                                                     <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                   </ActivityAction.Argument>
-                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="531,613" sap2010:WorkflowViewState.IdRef="Sequence_749">
+                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="531,653" sap2010:WorkflowViewState.IdRef="Sequence_749">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
-                                                                    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7390f837-bcd0-4e19-96e1-ad1eae9165fc" DisplayName="CV Screen Scope 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="434,551" sap2010:WorkflowViewState.IdRef="CVScope_81" SendOnPremData="False" Version="V6">
+                                                                    <p:CVScope ContinueOnError="{x:Null}" DelayBefore="{x:Null}" ScopeId="{x:Null}" ScrollOffset="{x:Null}" Server="{x:Null}" CvMethod="ElementDetection, OCR" DesignTimeCacheId="7390f837-bcd0-4e19-96e1-ad1eae9165fc" DisplayName="CV Screen Scope 'WindowsForms10.Window.8...'" sap:VirtualizedContainerService.HintSize="434,591" sap2010:WorkflowViewState.IdRef="CVScope_81" SendOnPremData="False" Version="V6">
                                                                       <p:CVScope.Body>
                                                                         <ActivityAction x:TypeArguments="x:Object">
                                                                           <ActivityAction.Argument>
@@ -3803,13 +3803,13 @@
                                                                 <uix:TargetApp Area="0, 0, 1920, 1049" FilePath="C:\Users\Public\Appdata\local\Younglimwon\KSystem ver.5 Genuine\bin\angkor.ylw.main.mainwin45.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAV6SURBVFhHvZd7TFNXHMdrkceMyuImy6boBopCCeyhvJS5LXEY/nAuwSxZ4pxOY2K2xWiMi86IM5qFTaMTUyzUKGTGiTieMhxpmTj+ADXSAsUn3SSb0b18LAq0Pft+z87ZitZS3OOXfPK7Pffc8/3d3+937r01BLOE4i4jGHHv8f9qEI0EY0GYGhqWtVyMH7Hq2JawcRuvhx4871b5LOAGA+ALEKHGh1ysvmOGscaZ+VBB+wdAUQE8yr+sxh+48LGOmUYQdu16tAxSCMOozfbVK+d83vACf+cerpBrh2QQOq6EmQH6HDV+XwAUretI+2vxg2dyJpy5/NT6gublvbPKbD/FFF6N43hiiXNYAdQrYZ2BV9W4DACiIyhMz9+0L9uzU5F+s82V/Gu+fZWYXtIhxu++JgOPtbiHVxIINSjhO8rncvzNypJwCstJsDpnehhEc2qcGVUNnc97gFhRt90Ta3aLuL0X1nHOBPOV0MUhJCfD5ythcitl32kTx+cdqpRpRBBjwBLQWuvMEI1dKb6K9hfF/PLDdymOuz/EeU+ae0NPO21acadMKUQjcbwOddsPXpEnYaj1BIhuAG4gIO6zu0zefa0LPLPLbJ7Yoh6B+c4kq2Mc5yOQ4LsGi7COMq3A+HVX6qALvumeLn9D6FmcN4PfgAC+Wme6sLuSRUHzCmGytvue3nuR4jemWrpk1ycUdwZPPRaJVIcBrflcQviRsy+9Vu3IrMfcASXsJRRv6k66ssm2pmeqxSXi954bYNNNLXa9zWuRwaHrjoXWggNgDcgDMyA2Xp7cKsZ81rLopM1lEmgsH5qNwh7AtHu+PT9lR15F6RLU+yaFlfhOXhqSOA2LjQYMQN+ZBzW+3el+LMnwiYhH43mX1e4UyMJAoytF4NwddHup+8eoyYaPxTNTLN1XkWYxqeiywHFT3hFrONc1Wc8Gr7s2CMqJ8IvBbYC7SxeOnpjsiB396dwBE83fedIOnBSbbKvbTl2amMj58ZbuSfGW8+5JaLhk61nvwqOlvqU1hek8t6x210j6kIwBAJku+BngAgO41PtI2thdN3L/TK2zL85yXsSav9/EeSML+p+AsCOj9IR4r36bp+xUrhdbUBzveu7gvPJKuVa1Myu0DNBUEDJq+Bi8ROy9Pxizxu3+eek0BIAs9GE7srvf4Rw8iFo22taKamdmv73bRGHB/qhzprGMhWqd0HrA3/RFnzYvi6ZHijezBKCfAaDZ5ohbhugqx6w2dL/A0w87IcOLvqAwkQ0K1vN6+NBLoW1/23zjW1VF8kIIl6gAvKAP5Ujg+IbGDyKqHFncPb8rQW5PnzpmI9Mv5lz44QexqKpIPjohWq0CINfR5aM5vrXpXd0zyaBZCfLuKa4DYVDyJQQfejkgJJuHHrQocdKKDMjAVn21xb9x+QT9EPQBHYguxS8gVc0LLQgKKx8FepQ4Oep/noZF5ceHOuYOagM6iH51zPfFZD2fPqhpAfhocBP4AAPYrsYH1RSL+mcjEuSDu4DiOiunwaNqTvAgIKDrnwj6ABuQAaxW4wGbCgvzRRYoGzqIWiA/Xoi8KJBBQC4Cn62EdQZe9z8fyNTiOogIsA2wGfXOsKpzg76iBpkWgF+ohBkAszBTjQ9ZRyWgA5kNHIABkM16Dv19BgH9DFgJGABhLzyuxh+cPj+DgH82RoECoHtjuRq/v5wQkG8zeP05xgzwv0GUGg8pAG0Q4U6RWYOfBdoBg1ggJ9xrENAl2AN0BsxqbFji2iDmn40osAewOefKCf6mReDLlXgB0DvjoQLQBkH/bLwBPpIntGkBCoIT4H39m/7fMIgyGzqIwDcEQT4F5YuH4uAf3Xkgg3jgXeBvEA77L8T/NoPhDwenCfuUbGH5AAAAAElFTkSuQmCC" InformativeScreenshot="c4eb61f2328c7dd67db078e9999083c6.png" Selector="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" Title="CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" />
                                                               </uix:NApplicationCard.TargetApp>
                                                             </uix:NApplicationCard>
-                                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable_DKHTCD]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="587,2242" sap2010:WorkflowViewState.IdRef="ForEachRow_33">
+                                                            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[DataTable_DKHTCD]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="587,2237" sap2010:WorkflowViewState.IdRef="ForEachRow_33">
                                                               <ui:ForEachRow.Body>
                                                                 <ActivityAction x:TypeArguments="sd:DataRow">
                                                                   <ActivityAction.Argument>
                                                                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                                   </ActivityAction.Argument>
-                                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,2062" sap2010:WorkflowViewState.IdRef="Sequence_680">
+                                                                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="468,2057" sap2010:WorkflowViewState.IdRef="Sequence_680">
                                                                     <Sequence.Variables>
                                                                       <Variable x:TypeArguments="x:Int32" Name="CurrentRowIndex" />
                                                                     </Sequence.Variables>
@@ -3865,7 +3865,7 @@
                                                                         <OutArgument x:TypeArguments="x:String">[step_name]</OutArgument>
                                                                       </ui:GetRowItem.Value>
                                                                     </ui:GetRowItem>
-                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,175" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[&quot;Current Row Index: &quot; &amp; CurrentRowIndex &amp; vbNewLine &amp;&#xA;&quot;Item Code: &quot; &amp; ItemCode &amp; vbNewLine &amp;&#xA;&quot;Step name: &quot; &amp; step_name]" />
+                                                                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="434,173" sap2010:WorkflowViewState.IdRef="LogMessage_74" Level="Info" Message="[&quot;Current Row Index: &quot; &amp; CurrentRowIndex &amp; vbNewLine &amp;&#xA;&quot;Item Code: &quot; &amp; ItemCode &amp; vbNewLine &amp;&#xA;&quot;Step name: &quot; &amp; step_name]" />
                                                                     <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_79" Text="[ItemCode]" />
                                                                     <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_276" ScopeIdentifier="e36b5f33-f4d1-43b4-8244-6b1696b8bb54" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Right)][u(hk)]" Version="V3">
                                                                       <uix:NKeyboardShortcuts.Target>
@@ -3883,7 +3883,7 @@
                                                                       </uix:NKeyboardShortcuts.VerifyOptions>
                                                                     </uix:NKeyboardShortcuts>
                                                                     <ui:SetToClipboard DisplayName="Set To Clipboard" sap:VirtualizedContainerService.HintSize="434,92" sap2010:WorkflowViewState.IdRef="SetToClipboard_80" Text="[step_name]" />
-                                                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Đóng hộp -　梱包'" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_277" ScopeIdentifier="e36b5f33-f4d1-43b4-8244-6b1696b8bb54" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Left)][u(hk)]" Version="V3">
+                                                                    <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'Đóng hộp -　梱包'" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_277" ScopeIdentifier="e36b5f33-f4d1-43b4-8244-6b1696b8bb54" Shortcuts="[d(hk)][d(ctrl)]v[u(ctrl)][u(hk)][d(hk)][k(Down)][u(hk)][d(hk)][k(Left)][u(hk)]" Version="V3">
                                                                       <uix:NKeyboardShortcuts.Target>
                                                                         <uix:TargetAnchorable DesignTimeRectangle="360, 213, 1556, 802" DesignTimeScaleFactor="1" FullSelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' /&gt;" FuzzySelectorArgument="&lt;wnd ctrlname='SS1' /&gt;&lt;wnd ctrlname='SS1' check:text='Đóng hộp -　梱包' /&gt;" Guid="43bfb34f-63c4-4336-9523-e3fd7039894c" InformativeScreenshot="bc56f037c6389c93c89a46ea0aaa4098.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive" />
                                                                       </uix:NKeyboardShortcuts.Target>
@@ -3898,7 +3898,7 @@
                                                                         </uix:VerifyExecutionOptions>
                                                                       </uix:NKeyboardShortcuts.VerifyOptions>
                                                                     </uix:NKeyboardShortcuts>
-                                                                    <Assign sap:VirtualizedContainerService.HintSize="434,106" sap2010:WorkflowViewState.IdRef="Assign_263">
+                                                                    <Assign sap:VirtualizedContainerService.HintSize="434,105" sap2010:WorkflowViewState.IdRef="Assign_263">
                                                                       <Assign.To>
                                                                         <OutArgument x:TypeArguments="x:Int32">[CurrentRowNumberOut_DKHTCD]</OutArgument>
                                                                       </Assign.To>
@@ -3910,28 +3910,47 @@
                                                                 </ActivityAction>
                                                               </ui:ForEachRow.Body>
                                                             </ui:ForEachRow>
-                                                            <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'text  Lưu'" sap:VirtualizedContainerService.HintSize="587,139" sap2010:WorkflowViewState.IdRef="Click_672" KeyModifiers="None" MouseButton="BTN_LEFT">
-                                                              <ui:Click.CursorPosition>
-                                                                <ui:CursorPosition Position="Center">
-                                                                  <ui:CursorPosition.OffsetX>
-                                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                                  </ui:CursorPosition.OffsetX>
-                                                                  <ui:CursorPosition.OffsetY>
-                                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                                  </ui:CursorPosition.OffsetY>
-                                                                </ui:CursorPosition>
-                                                              </ui:Click.CursorPosition>
-                                                              <ui:Click.Target>
-                                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca9db21d-71a7-4d6e-a928-5a3554378d8a" InformativeScreenshot="6a44e54cd2ab772d63b0779676df56ea" Selector="&lt;ctrl name='Lưu' role='text' /&gt;">
-                                                                  <ui:Target.TimeoutMS>
-                                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                                  </ui:Target.TimeoutMS>
-                                                                  <ui:Target.WaitForReady>
-                                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                                  </ui:Target.WaitForReady>
-                                                                </ui:Target>
-                                                              </ui:Click.Target>
-                                                            </ui:Click>
+                                                            <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Application: CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" sap:VirtualizedContainerService.HintSize="587,515" sap2010:WorkflowViewState.IdRef="NApplicationCard_129" ScopeGuid="210c7631-8ba4-4c8c-8834-5eca60b8a2d0" Version="V2">
+                                                              <uix:NApplicationCard.Body>
+                                                                <ActivityAction x:TypeArguments="x:Object">
+                                                                  <ActivityAction.Argument>
+                                                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                                                  </ActivityAction.Argument>
+                                                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="531,192" sap2010:WorkflowViewState.IdRef="Sequence_767">
+                                                                    <sap:WorkflowViewStateService.ViewState>
+                                                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                                                      </scg:Dictionary>
+                                                                    </sap:WorkflowViewStateService.ViewState>
+                                                                    <ui:Click AlterIfDisabled="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'text  Lưu'" sap:VirtualizedContainerService.HintSize="416,132" sap2010:WorkflowViewState.IdRef="Click_672" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                                                      <ui:Click.CursorPosition>
+                                                                        <ui:CursorPosition Position="Center">
+                                                                          <ui:CursorPosition.OffsetX>
+                                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                                          </ui:CursorPosition.OffsetX>
+                                                                          <ui:CursorPosition.OffsetY>
+                                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                                          </ui:CursorPosition.OffsetY>
+                                                                        </ui:CursorPosition>
+                                                                      </ui:Click.CursorPosition>
+                                                                      <ui:Click.Target>
+                                                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="ca9db21d-71a7-4d6e-a928-5a3554378d8a" InformativeScreenshot="6a44e54cd2ab772d63b0779676df56ea" Selector="&lt;ctrl name='Lưu' role='text' /&gt;">
+                                                                          <ui:Target.TimeoutMS>
+                                                                            <InArgument x:TypeArguments="x:Int32" />
+                                                                          </ui:Target.TimeoutMS>
+                                                                          <ui:Target.WaitForReady>
+                                                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                                                          </ui:Target.WaitForReady>
+                                                                        </ui:Target>
+                                                                      </ui:Click.Target>
+                                                                    </ui:Click>
+                                                                  </Sequence>
+                                                                </ActivityAction>
+                                                              </uix:NApplicationCard.Body>
+                                                              <uix:NApplicationCard.TargetApp>
+                                                                <uix:TargetApp Area="0, 0, 1920, 1049" FilePath="C:\Users\Public\Appdata\local\Younglimwon\KSystem ver.5 Genuine\bin\angkor.ylw.main.mainwin45.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAV6SURBVFhHvZd7TFNXHMdrkceMyuImy6boBopCCeyhvJS5LXEY/nAuwSxZ4pxOY2K2xWiMi86IM5qFTaMTUyzUKGTGiTieMhxpmTj+ADXSAsUn3SSb0b18LAq0Pft+z87ZitZS3OOXfPK7Pffc8/3d3+937r01BLOE4i4jGHHv8f9qEI0EY0GYGhqWtVyMH7Hq2JawcRuvhx4871b5LOAGA+ALEKHGh1ysvmOGscaZ+VBB+wdAUQE8yr+sxh+48LGOmUYQdu16tAxSCMOozfbVK+d83vACf+cerpBrh2QQOq6EmQH6HDV+XwAUretI+2vxg2dyJpy5/NT6gublvbPKbD/FFF6N43hiiXNYAdQrYZ2BV9W4DACiIyhMz9+0L9uzU5F+s82V/Gu+fZWYXtIhxu++JgOPtbiHVxIINSjhO8rncvzNypJwCstJsDpnehhEc2qcGVUNnc97gFhRt90Ta3aLuL0X1nHOBPOV0MUhJCfD5ythcitl32kTx+cdqpRpRBBjwBLQWuvMEI1dKb6K9hfF/PLDdymOuz/EeU+ae0NPO21acadMKUQjcbwOddsPXpEnYaj1BIhuAG4gIO6zu0zefa0LPLPLbJ7Yoh6B+c4kq2Mc5yOQ4LsGi7COMq3A+HVX6qALvumeLn9D6FmcN4PfgAC+Wme6sLuSRUHzCmGytvue3nuR4jemWrpk1ycUdwZPPRaJVIcBrflcQviRsy+9Vu3IrMfcASXsJRRv6k66ssm2pmeqxSXi954bYNNNLXa9zWuRwaHrjoXWggNgDcgDMyA2Xp7cKsZ81rLopM1lEmgsH5qNwh7AtHu+PT9lR15F6RLU+yaFlfhOXhqSOA2LjQYMQN+ZBzW+3el+LMnwiYhH43mX1e4UyMJAoytF4NwddHup+8eoyYaPxTNTLN1XkWYxqeiywHFT3hFrONc1Wc8Gr7s2CMqJ8IvBbYC7SxeOnpjsiB396dwBE83fedIOnBSbbKvbTl2amMj58ZbuSfGW8+5JaLhk61nvwqOlvqU1hek8t6x210j6kIwBAJku+BngAgO41PtI2thdN3L/TK2zL85yXsSav9/EeSML+p+AsCOj9IR4r36bp+xUrhdbUBzveu7gvPJKuVa1Myu0DNBUEDJq+Bi8ROy9Pxizxu3+eek0BIAs9GE7srvf4Rw8iFo22taKamdmv73bRGHB/qhzprGMhWqd0HrA3/RFnzYvi6ZHijezBKCfAaDZ5ohbhugqx6w2dL/A0w87IcOLvqAwkQ0K1vN6+NBLoW1/23zjW1VF8kIIl6gAvKAP5Ujg+IbGDyKqHFncPb8rQW5PnzpmI9Mv5lz44QexqKpIPjohWq0CINfR5aM5vrXpXd0zyaBZCfLuKa4DYVDyJQQfejkgJJuHHrQocdKKDMjAVn21xb9x+QT9EPQBHYguxS8gVc0LLQgKKx8FepQ4Oep/noZF5ceHOuYOagM6iH51zPfFZD2fPqhpAfhocBP4AAPYrsYH1RSL+mcjEuSDu4DiOiunwaNqTvAgIKDrnwj6ABuQAaxW4wGbCgvzRRYoGzqIWiA/Xoi8KJBBQC4Cn62EdQZe9z8fyNTiOogIsA2wGfXOsKpzg76iBpkWgF+ohBkAszBTjQ9ZRyWgA5kNHIABkM16Dv19BgH9DFgJGABhLzyuxh+cPj+DgH82RoECoHtjuRq/v5wQkG8zeP05xgzwv0GUGg8pAG0Q4U6RWYOfBdoBg1ggJ9xrENAl2AN0BsxqbFji2iDmn40osAewOefKCf6mReDLlXgB0DvjoQLQBkH/bLwBPpIntGkBCoIT4H39m/7fMIgyGzqIwDcEQT4F5YuH4uAf3Xkgg3jgXeBvEA77L8T/NoPhDwenCfuUbGH5AAAAAElFTkSuQmCC" InformativeScreenshot="0d9a17dafebce58e9f1d4e603bbb870e.png" Selector="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" Title="CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH" />
+                                                              </uix:NApplicationCard.TargetApp>
+                                                            </uix:NApplicationCard>
                                                             <ui:InvokeCode ContinueOnError="{x:Null}" Code="' Arguments:&#xA;' in_FilePath As String&#xA;' in_SheetToAppend As String&#xA;' out_ErrorMessage As String&#xA;&#xA;out_ErrorMessage = String.Empty&#xA;&#xA;Try&#xA;    If Not System.IO.File.Exists(in_FilePath) Then&#xA;        out_ErrorMessage = &quot;Lỗi: File không tồn tại tại đường dẫn: &quot; &amp; in_FilePath&#xA;        Return&#xA;    End If&#xA;&#xA;    Dim lines As New List(Of String)(System.IO.File.ReadAllLines(in_FilePath))&#xA;&#x9;&#xA;&#x9;While lines.Count &lt; 2&#xA;&#x9;&#x9;lines.Add(&quot;&quot;)&#xA;&#x9;End While&#xA;&#xA;    If String.IsNullOrWhiteSpace(lines(0)) Then&#xA;        ' Dòng đầu rỗng&#xA;        lines(0) = in_SheetToAppend 'Ghi đèn sheet đã hoàn thành vào dòng 1&#xA;        lines(1) = &quot;&quot; 'ghi đè dòng 2 về trạng thái rỗng&#xA;    Else&#xA;        ' File không rỗng, đã có sheet hoàn thành trước đó -&gt; chỉ append vào dòng 0&#xA;        lines(0)= lines(0) &amp; &quot;,&quot; &amp; in_SheetToAppend.Trim() 'nối sheet đã hoàn thành&#xA;        lines(1) = &quot;&quot; 'ghi đè dòng 2 về rỗng&#xA;    End If&#xA;&#xA;    System.IO.File.WriteAllLines(in_FilePath, lines.ToArray())&#xA;&#xA;Catch ex As Exception&#xA;    out_ErrorMessage = &quot;Lỗi khi nối vào dòng 0: &quot; &amp; ex.Message&#xA;End Try" DisplayName="Invoke Code: Writing row 1st of Log" sap:VirtualizedContainerService.HintSize="587,197" sap2010:WorkflowViewState.IdRef="InvokeCode_66">
                                                               <ui:InvokeCode.Arguments>
                                                                 <InArgument x:TypeArguments="x:String" x:Key="in_SheetToAppend">[arg_CurrentSheetName]</InArgument>
@@ -3939,8 +3958,8 @@
                                                                 <InOutArgument x:TypeArguments="x:String" x:Key="out_ErrorMessage">[ErrorMessageOut_DKHTCD]</InOutArgument>
                                                               </ui:InvokeCode.Arguments>
                                                             </ui:InvokeCode>
-                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="587,177" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="[&quot;Da ghi 1st line log xong&quot; &amp; vbNewLine &amp;&#xA;&quot;Error: &quot; + ErrorMessageOut_DKHTCD]" />
-                                                            <Assign sap:VirtualizedContainerService.HintSize="587,115" sap2010:WorkflowViewState.IdRef="Assign_264">
+                                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="587,173" sap2010:WorkflowViewState.IdRef="LogMessage_48" Level="Info" Message="[&quot;Da ghi 1st line log xong&quot; &amp; vbNewLine &amp;&#xA;&quot;Error: &quot; + ErrorMessageOut_DKHTCD]" />
+                                                            <Assign sap:VirtualizedContainerService.HintSize="587,114" sap2010:WorkflowViewState.IdRef="Assign_264">
                                                               <Assign.To>
                                                                 <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
                                                               </Assign.To>
@@ -3948,7 +3967,7 @@
                                                                 <InArgument x:TypeArguments="x:Int32">[counter + 1]</InArgument>
                                                               </Assign.Value>
                                                             </Assign>
-                                                            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="587,160" sap2010:WorkflowViewState.IdRef="WriteTextFile_13" Text="RUNNING" />
+                                                            <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="587,156" sap2010:WorkflowViewState.IdRef="WriteTextFile_13" Text="RUNNING" />
                                                           </Sequence>
                                                         </Sequence>
                                                       </ActivityAction>
@@ -4776,7 +4795,7 @@
                                           <av:PointCollection x:Key="ConnectorLocation">1410,955 1410,985 770,985 770,1095</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Đăng ký trung tâm làm việc" sap:VirtualizedContainerService.HintSize="1312,11928.000000000002" sap2010:WorkflowViewState.IdRef="Sequence_215">
+                                      <Sequence DisplayName="Đăng ký trung tâm làm việc" sap:VirtualizedContainerService.HintSize="1312,11884" sap2010:WorkflowViewState.IdRef="Sequence_215">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="x:String" Name="ErrorMessageOut_DKTTLV" />
                                           <Variable x:TypeArguments="x:Int32" Name="CurrentRowNumberOut_DKTTLV" />
@@ -4797,8 +4816,8 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="1278,167" sap2010:WorkflowViewState.IdRef="WriteTextFile_10" Text="RUNNING" />
-                                        <Assign sap:VirtualizedContainerService.HintSize="1278,115" sap2010:WorkflowViewState.IdRef="Assign_245">
+                                        <ui:WriteTextFile File="{x:Null}" DisplayName="Write Text File" FileName="[STATUS_Path]" sap:VirtualizedContainerService.HintSize="1278,165" sap2010:WorkflowViewState.IdRef="WriteTextFile_10" Text="RUNNING" />
+                                        <Assign sap:VirtualizedContainerService.HintSize="1278,114" sap2010:WorkflowViewState.IdRef="Assign_245">
                                           <Assign.To>
                                             <OutArgument x:TypeArguments="x:Int32">[counter]</OutArgument>
                                           </Assign.To>
@@ -4806,14 +4825,14 @@
                                             <InArgument x:TypeArguments="x:Int32">0</InArgument>
                                           </Assign.Value>
                                         </Assign>
-                                        <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1278,11586" sap2010:WorkflowViewState.IdRef="SequenceX_10">
+                                        <ueab:SequenceX DisplayName="Single Excel Process Scope" sap:VirtualizedContainerService.HintSize="1278,11545" sap2010:WorkflowViewState.IdRef="SequenceX_10">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <Assign DisplayName="Set Variable Value - Nhập các Sheet không lấy data" sap:VirtualizedContainerService.HintSize="1244,115" sap2010:WorkflowViewState.IdRef="Assign_49">
+                                          <Assign DisplayName="Set Variable Value - Nhập các Sheet không lấy data" sap:VirtualizedContainerService.HintSize="1244,114" sap2010:WorkflowViewState.IdRef="Assign_49">
                                             <Assign.To>
                                               <OutArgument x:TypeArguments="s:String[]">[TenSheetBoQua]</OutArgument>
                                             </Assign.To>
@@ -4826,33 +4845,33 @@
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
                                           </Assign>
-                                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1244,11388" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_10">
+                                          <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="1244,11348" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_10">
                                             <ueab:ExcelProcessScopeX.Body>
                                               <ActivityAction x:TypeArguments="ui:IExcelProcess">
                                                 <ActivityAction.Argument>
                                                   <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
                                                 </ActivityAction.Argument>
-                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1210,11278" sap2010:WorkflowViewState.IdRef="Sequence_224">
+                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1210,11238" sap2010:WorkflowViewState.IdRef="Sequence_224">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1176,11109" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[exel_file_locate_arg]">
+                                                  <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="1176,11069" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_10" KeepExcelFileOpen="True" ResizeWindow="Maximize" WorkbookPath="[exel_file_locate_arg]">
                                                     <ueab:ExcelApplicationCard.Body>
                                                       <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                                                         <ActivityAction.Argument>
                                                           <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="ExcelSheet" />
                                                         </ActivityAction.Argument>
-                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1142,10804" sap2010:WorkflowViewState.IdRef="Sequence_225">
+                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1142,10768" sap2010:WorkflowViewState.IdRef="Sequence_225">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
-                                                          <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1108,10744" sap2010:WorkflowViewState.IdRef="ForEachSheetX_10" Workbook="[ExcelSheet]">
+                                                          <ueab:ForEachSheetX DisplayName="For Each Excel Sheet" sap:VirtualizedContainerService.HintSize="1108,10708" sap2010:WorkflowViewState.IdRef="ForEachSheetX_10" Workbook="[ExcelSheet]">
                                                             <ueab:ForEachSheetX.Body>
                                                               <ActivityAction x:TypeArguments="ue:WorksheetQuickHandle, x:Int32">
                                                                 <ActivityAction.Argument1>
@@ -4861,7 +4880,7 @@
                                                                 <ActivityAction.Argument2>
                                                                   <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                                                                 </ActivityAction.Argument2>
-                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1074,10554" sap2010:WorkflowViewState.IdRef="Sequence_220">
+                                                                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1074,10521" sap2010:WorkflowViewState.IdRef="Sequence_220">
                                                                   <sap:WorkflowViewStateService.ViewState>
                                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4877,14 +4896,14 @@
                                                                       <InOutArgument x:TypeArguments="x:String" x:Key="out_ErrorMessage">[ErrorMessageOut_DKTTLV]</InOutArgument>
                                                                     </ui:InvokeCode.Arguments>
                                                                   </ui:InvokeCode>
-                                                                  <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="1040,113" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_10" Index="[CurrentIndex - 1]" Sheet="[arg_CurrentSheetName]">
+                                                                  <ui:ExcelGetWorkbookSheet DisplayName="Get Workbook Sheet" sap:VirtualizedContainerService.HintSize="1040,112" sap2010:WorkflowViewState.IdRef="ExcelGetWorkbookSheet_10" Index="[CurrentIndex - 1]" Sheet="[arg_CurrentSheetName]">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ui:ExcelGetWorkbookSheet>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="1040,115" sap2010:WorkflowViewState.IdRef="Assign_230">
+                                                                  <Assign sap:VirtualizedContainerService.HintSize="1040,114" sap2010:WorkflowViewState.IdRef="Assign_230">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="s:String[]">[AllSheetBoQua_DKTTLV]</OutArgument>
                                                                     </Assign.To>
@@ -4892,7 +4911,7 @@
                                                                       <InArgument x:TypeArguments="s:String[]">[TenSheetBoQua.Concat(ProcessedSheetsArrayOut_DKTTLV).ToArray]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
-                                                                  <If Condition="[AllSheetBoQua_DKTTLV.Contains(arg_CurrentSheetName)]" sap:VirtualizedContainerService.HintSize="1040,337" sap2010:WorkflowViewState.IdRef="If_95">
+                                                                  <If Condition="[AllSheetBoQua_DKTTLV.Contains(arg_CurrentSheetName)]" sap:VirtualizedContainerService.HintSize="1040,335" sap2010:WorkflowViewState.IdRef="If_95">
                                                                     <If.Then>
                                                                       <Sequence DisplayName="Then" sap:VirtualizedContainerService.HintSize="416,108" sap2010:WorkflowViewState.IdRef="Sequence_648">
                                                                         <sap:WorkflowViewStateService.ViewState>
@@ -4904,7 +4923,7 @@
                                                                       </Sequence>
                                                                     </If.Then>
                                                                     <If.Else>
-                                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,90" sap2010:WorkflowViewState.IdRef="Sequence_647">
+                                                                      <Sequence DisplayName="Else" sap:VirtualizedContainerService.HintSize="416,89" sap2010:WorkflowViewState.IdRef="Sequence_647">
                                                                         <sap:WorkflowViewStateService.ViewState>
                                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -4913,14 +4932,14 @@
                                                                       </Sequence>
                                                                     </If.Else>
                                                                   </If>
-                                                                  <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1040,203" sap2010:WorkflowViewState.IdRef="ReadRangeX_33" Range="[CurrentSheet]" SaveTo="[DataTable_DKTTLV]">
+                                                                  <ueab:ReadRangeX DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="1040,201" sap2010:WorkflowViewState.IdRef="ReadRangeX_33" Range="[CurrentSheet]" SaveTo="[DataTable_DKTTLV]">
                                                                     <sap:WorkflowViewStateService.ViewState>
                                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                       </scg:Dictionary>
                                                                     </sap:WorkflowViewStateService.ViewState>
                                                                   </ueab:ReadRangeX>
-                                                                  <Assign sap:VirtualizedContainerService.HintSize="1040,115" sap2010:WorkflowViewState.IdRef="Assign_232">
+                                                                  <Assign sap:VirtualizedContainerService.HintSize="1040,114" sap2010:WorkflowViewState.IdRef="Assign_232">
                                                                     <Assign.To>
                                                                       <OutArgument x:TypeArguments="x:Int32">[LastRowIndex]</OutArgument>
                                                                     </Assign.To>
@@ -4928,7 +4947,7 @@
                                                                       <InArgument x:TypeArguments="x:Int32">[DataTable_DKTTLV.RowCount - 1]</InArgument>
                                                                     </Assign.Value>
                                                                   </Assign>
-                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Product name" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="1040,221" sap2010:WorkflowViewState.IdRef="GetRowItem_199" Row="[DataTable_DKTTLV.Rows(LastRowIndex)]">
+                                                                  <ui:GetRowItem Column="{x:Null}" ColumnIndex="{x:Null}" ColumnName="Product name" DisplayName="Get Row Item" sap:VirtualizedContainerService.HintSize="1040,219" sap2010:WorkflowViewState.IdRef="GetRowItem_199" Row="[DataTable_DKTTLV.Rows(LastRowIndex)]">
                                                                     <ui:GetRowItem.Value>
                                                                       <OutArgument x:TypeArguments="x:String">[ProductName_DKTTLV]</OutArgument>
                                                                     </ui:GetRowItem.Value>
@@ -4984,22 +5003,22 @@
                                                                       </Sequence>
                                                                     </ui:CommentOut.Body>
                                                                   </ui:CommentOut>
-                                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ" sap:VirtualizedContainerService.HintSize="1040,8974" sap2010:WorkflowViewState.IdRef="NApplicationCard_120" ScopeGuid="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V2">
+                                                                  <uix:NApplicationCard AttachMode="ByInstance" DisplayName="CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ" sap:VirtualizedContainerService.HintSize="1040,8950" sap2010:WorkflowViewState.IdRef="NApplicationCard_120" ScopeGuid="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V2">
                                                                     <uix:NApplicationCard.Body>
                                                                       <ActivityAction x:TypeArguments="x:Object">
                                                                         <ActivityAction.Argument>
                                                                           <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                                                                         </ActivityAction.Argument>
-                                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,8658" sap2010:WorkflowViewState.IdRef="Sequence_651">
+                                                                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="1006,8636" sap2010:WorkflowViewState.IdRef="Sequence_651">
                                                                           <sap:WorkflowViewStateService.ViewState>
                                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                             </scg:Dictionary>
                                                                           </sap:WorkflowViewStateService.ViewState>
-                                                                          <uix:NCheckState DisplayName="Check App State 'CÔNG TY'" sap:VirtualizedContainerService.HintSize="972,1496" sap2010:WorkflowViewState.IdRef="NCheckState_13" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Timeout="2" Version="V3">
+                                                                          <uix:NCheckState DisplayName="Check App State 'CÔNG TY'" sap:VirtualizedContainerService.HintSize="972,1486" sap2010:WorkflowViewState.IdRef="NCheckState_13" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Timeout="2" Version="V3">
                                                                             <uix:NCheckState.IfExists>
-                                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,92" sap2010:WorkflowViewState.IdRef="Sequence_655">
+                                                                              <Sequence DisplayName="Target appears" sap:VirtualizedContainerService.HintSize="450,91" sap2010:WorkflowViewState.IdRef="Sequence_655">
                                                                                 <sap:WorkflowViewStateService.ViewState>
                                                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -5008,7 +5027,7 @@
                                                                               </Sequence>
                                                                             </uix:NCheckState.IfExists>
                                                                             <uix:NCheckState.IfNotExists>
-                                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,1245" sap2010:WorkflowViewState.IdRef="Sequence_656">
+                                                                              <Sequence DisplayName="Target does not appear" sap:VirtualizedContainerService.HintSize="468,1237" sap2010:WorkflowViewState.IdRef="Sequence_656">
                                                                                 <Sequence.Variables>
                                                                                   <Variable x:TypeArguments="x:String" Name="identicationText" />
                                                                                   <Variable x:TypeArguments="x:String" Name="id" />
@@ -5019,8 +5038,8 @@
                                                                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                                                   </scg:Dictionary>
                                                                                 </sap:WorkflowViewStateService.ViewState>
-                                                                                <ui:ReadTextFile File="{x:Null}" Content="[identicationText]" DisplayName="Read Text File" FileName="KsystemIdentication.txt" sap:VirtualizedContainerService.HintSize="434,113" sap2010:WorkflowViewState.IdRef="ReadTextFile_13" />
-                                                                                <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_233">
+                                                                                <ui:ReadTextFile File="{x:Null}" Content="[identicationText]" DisplayName="Read Text File" FileName="KsystemIdentication.txt" sap:VirtualizedContainerService.HintSize="434,112" sap2010:WorkflowViewState.IdRef="ReadTextFile_13" />
+                                                                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_233">
                                                                                   <Assign.To>
                                                                                     <OutArgument x:TypeArguments="x:String">[id]</OutArgument>
                                                                                   </Assign.To>
@@ -5028,7 +5047,7 @@
                                                                                     <InArgument x:TypeArguments="x:String">[identicationText.Split(Environment.NewLine.ToCharArray, StringSplitOptions.RemoveEmptyEntries)(0).Split(":"c)(1).Trim()]</InArgument>
                                                                                   </Assign.Value>
                                                                                 </Assign>
-                                                                                <Assign sap:VirtualizedContainerService.HintSize="434,115" sap2010:WorkflowViewState.IdRef="Assign_234">
+                                                                                <Assign sap:VirtualizedContainerService.HintSize="434,114" sap2010:WorkflowViewState.IdRef="Assign_234">
                                                                                   <Assign.To>
                                                                                     <OutArgument x:TypeArguments="x:String">[password]</OutArgument>
                                                                                   </Assign.To>
@@ -5036,8 +5055,8 @@
                                                                                     <InArgument x:TypeArguments="x:String">[identicationText.Split(Environment.NewLine.ToCharArray, StringSplitOptions.RemoveEmptyEntries)(1).Split(":"c)(1).Trim()]</InArgument>
                                                                                   </Assign.Value>
                                                                                 </Assign>
-                                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,118" sap2010:WorkflowViewState.IdRef="MessageBox_78" Text="[&quot;id: &quot; +id +&quot;|&quot;+&quot;password: &quot;+ password]" />
-                                                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,251" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Text="[id]" Version="V3">
+                                                                                <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:02" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="434,117" sap2010:WorkflowViewState.IdRef="MessageBox_78" Text="[&quot;id: &quot; +id +&quot;|&quot;+&quot;password: &quot;+ password]" />
+                                                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'ID'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_25" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Text="[id]" Version="V3">
                                                                                   <uix:NTypeInto.Target>
                                                                                     <uix:TargetAnchorable CVScreenId="0a30f6e8-5dd7-48bf-a00e-853d43cea76b" CvElementArea="448, 138, 103, 26" CvType="InputBox" DesignTimeRectangle="450, 140, 100, 23" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='txtID' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtID' role='editable text' /&gt;" Guid="5304716f-2407-4abf-8ffe-6bd7e7b3a789" InformativeScreenshot="1a372aa644af255a653d8af698f32ef1.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='FrmMainSplash' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                       <uix:TargetAnchorable.Anchors>
@@ -5048,7 +5067,7 @@
                                                                                     </uix:TargetAnchorable>
                                                                                   </uix:NTypeInto.Target>
                                                                                 </uix:NTypeInto>
-                                                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Mật khẩu'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,251" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Text="[password]" Version="V3">
+                                                                                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'Mật khẩu'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="434,250" sap2010:WorkflowViewState.IdRef="NTypeInto_26" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Text="[password]" Version="V3">
                                                                                   <uix:NTypeInto.Target>
                                                                                     <uix:TargetAnchorable CVScreenId="87634a71-2b4d-44ec-9f1e-f14a9d77cc4a" CvElementArea="451, 168, 100, 25" CvType="InputBox" DesignTimeRectangle="450, 170, 100, 23" DesignTimeScaleFactor="1" ElementType="InputBoxPassword" FullSelectorArgument="&lt;ctrl automationid='txtPwd' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='txtPwd' role='editable text' /&gt;" Guid="c9b291b1-fc12-4dde-9cf5-3a4a0920e0f4" InformativeScreenshot="015bb9b979c0672d04fc177f12131a93.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='FrmMainSplash' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                       <uix:TargetAnchorable.Anchors>
@@ -5059,7 +5078,7 @@
                                                                                     </uix:TargetAnchorable>
                                                                                   </uix:NTypeInto.Target>
                                                                                 </uix:NTypeInto>
-                                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="434,220" sap2010:WorkflowViewState.IdRef="NClick_118" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
+                                                                                <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Login'" sap:VirtualizedContainerService.HintSize="434,218" sap2010:WorkflowViewState.IdRef="NClick_118" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
                                                                                   <uix:NClick.Target>
                                                                                     <uix:TargetAnchorable CVScreenId="87634a71-2b4d-44ec-9f1e-f14a9d77cc4a" CvElementArea="553, 137, 63, 57" CvTextArea="568, 159, 33, 15" CvTextArgument="Login" CvType="Button" DesignTimeRectangle="569, 158, 32, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl automationid='btnLogin' /&gt;&lt;ctrl name='Login' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='btnLogin' /&gt;&lt;ctrl name='Login' role='text' automationid='' check:text='Login' /&gt;" Guid="7a4cdbc0-42a6-430a-b0af-0549698d8c98" InformativeScreenshot="3bffd730944f1256cec701710f631e09.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='FrmMainSplash' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                       <uix:TargetAnchorable.Anchors>
@@ -5092,14 +5111,14 @@
                                                                               </uix:TargetAnchorable>
                                                                             </uix:NCheckState.Target>
                                                                           </uix:NCheckState>
-                                                                          <Sequence DisplayName="Sequence - open Dang ky trung tam lam viec" sap:VirtualizedContainerService.HintSize="972,7100" sap2010:WorkflowViewState.IdRef="Sequence_649">
+                                                                          <Sequence DisplayName="Sequence - open Dang ky trung tam lam viec" sap:VirtualizedContainerService.HintSize="972,7088" sap2010:WorkflowViewState.IdRef="Sequence_649">
                                                                             <sap:WorkflowViewStateService.ViewState>
                                                                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                                                 <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                                                                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                                               </scg:Dictionary>
                                                                             </sap:WorkflowViewStateService.ViewState>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'System.Data.DataRowView'" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NClick_157" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'System.Data.DataRowView'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_157" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable CVScreenId="04333446-55f1-4b0f-958e-290cbdcb017c" CvElementArea="290, 60, 19, 19" CvTextArea="79, 59, 127, 16" CvTextArgument="Quan ly thiet ke" CvType="ArrowButton" DesignTimeRectangle="60, 50, 255, 35" DesignTimeScaleFactor="1" ElementType="DropDown" FullSelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl automationid='cmbModule' /&gt;" FuzzySelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl automationid='cmbModule' role='combo box' /&gt;" Guid="bdb3a4c6-8ed3-468a-a8a3-48af73006cbb" InformativeScreenshot="b59adbdc056cf0f6bc7e44f16e6e6fe5.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                                               </uix:NClick.Target>
@@ -5142,7 +5161,7 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </ui:Click>
-                                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'AngKor.Ylw.Main.Formlib…'" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_246" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V3">
+                                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'AngKor.Ylw.Main.Formlib…'" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_246" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V3">
                                                                               <uix:NKeyboardShortcuts.Target>
                                                                                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 420, 272" DesignTimeScaleFactor="1" Guid="26a9bdeb-f58f-4935-9e2c-e2479bd49be9" InformativeScreenshot="f553f73c63cf3be333361d4b3859e4ee.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.FuzzySelectorArgument>
@@ -5224,7 +5243,7 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </ui:Click>
-                                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'AngKor.Ylw.Main.Formlib…'" sap:VirtualizedContainerService.HintSize="434,269" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_247" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V3">
+                                                                            <uix:NKeyboardShortcuts ActivateBefore="True" ClickBeforeMode="None" DisplayName="Keyboard Shortcuts 'AngKor.Ylw.Main.Formlib…'" sap:VirtualizedContainerService.HintSize="434,267" sap2010:WorkflowViewState.IdRef="NKeyboardShortcuts_247" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Shortcuts="[d(hk)][k(esc)][u(hk)]" Version="V3">
                                                                               <uix:NKeyboardShortcuts.Target>
                                                                                 <uix:TargetAnchorable DesignTimeRectangle="0, 0, 420, 272" DesignTimeScaleFactor="1" Guid="26a9bdeb-f58f-4935-9e2c-e2479bd49be9" InformativeScreenshot="f553f73c63cf3be333361d4b3859e4ee.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' idx='*' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.FuzzySelectorArgument>
@@ -5250,7 +5269,7 @@
                                                                                 </scg:Dictionary>
                                                                               </sap:WorkflowViewStateService.ViewState>
                                                                             </uix:NKeyboardShortcuts>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Đăng ký BOM và công đoạn'" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NClick_158" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Đăng ký BOM và công đoạn'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_158" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable CVScreenId="f212e262-c300-4d94-b663-99a42d9ff539" CvTextArea="88, 131, 164, 16" CvTextArgument="Dang ky BOM va cong doan" CvType="Text" DesignTimeRectangle="89, 130, 217, 16" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:15' role='outline item' /&gt;&lt;ctrl name='Đăng ký BOM và công đoạn' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:15' role='outline item' /&gt;&lt;ctrl name='Đăng ký BOM và công đoạn' role='text' automationid='' check:text='Đăng ký BOM và công đoạn' /&gt;" Guid="eaa30d13-149b-498a-b897-9d26091dd9f8" InformativeScreenshot="0eb08043b1ed16ff1703ff29587eb5ed.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.Anchors>
@@ -5271,7 +5290,7 @@
                                                                                 </uix:VerifyExecutionOptions>
                                                                               </uix:NClick.VerifyOptions>
                                                                             </uix:NClick>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Đăng ký BOM và công đoạn'" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NClick_117" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Đăng ký BOM và công đoạn'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_117" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable CVScreenId="8ad17747-7ae6-4d88-9d73-c107c3c0ffcc" CvTextArea="88, 553, 215, 16" CvTextArgument="Dang ky trung tam lam viec theo san phar" CvType="Text" DesignTimeRectangle="89, 553, 236, 15" DesignTimeScaleFactor="1" ElementType="Text" FullSelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:17' role='outline item' /&gt;&lt;ctrl idx='17' name='System.Windows.Controls.TreeViewItem Header: Items.Count:0' role='outline item' /&gt;&lt;ctrl name='Đăng ký trung tâm làm việc theo sản phẩm (4)' role='text' /&gt;" FuzzySelectorArgument="&lt;ctrl name='AngKor.Ylw.Main.Formlib;component/PagMainMenu.xaml' role='pane' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:17' role='outline item' /&gt;&lt;ctrl name='System.Windows.Controls.TreeViewItem Header: Items.Count:0' role='outline item' /&gt;&lt;ctrl name='Đăng ký trung tâm làm việc theo sản phẩm (4)' role='text' automationid='' check:text='Đăng ký trung tâm làm việc theo sản phẩm (4)' /&gt;" Guid="35edc9a4-f8c8-4143-a6a7-d4e1670c8efd" InformativeScreenshot="bc8882e9d9a5d2dfef40966429b15ecd.png" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive" />
                                                                               </uix:NClick.Target>
@@ -5286,7 +5305,7 @@
                                                                                 </uix:VerifyExecutionOptions>
                                                                               </uix:NClick.VerifyOptions>
                                                                             </uix:NClick>
-                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Item name'" sap:VirtualizedContainerService.HintSize="434,227" sap2010:WorkflowViewState.IdRef="NClick_121" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
+                                                                            <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'Item name'" sap:VirtualizedContainerService.HintSize="434,225" sap2010:WorkflowViewState.IdRef="NClick_121" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="8448d8dd-858b-4ac6-8a9a-4a7fa8c9d3ee" Version="V3">
                                                                               <uix:NClick.Target>
                                                                                 <uix:TargetAnchorable CVScreenId="dfe7685c-1368-47da-8b34-52eb77329879" CvElementArea="674, 137, 170, 24" CvType="InputBox" DesignTimeRectangle="676, 135, 167, 28" DesignTimeScaleFactor="1" ElementType="InputBox" FullSelectorArgument="&lt;ctrl automationid='GridGroupBoxC4' /&gt;&lt;ctrl automationid='textBox1' /&gt;" FuzzySelectorArgument="&lt;ctrl automationid='GridGroupBoxC4' /&gt;&lt;ctrl automationid='textBox1' role='editable text' /&gt;" Guid="d7b6ade3-514a-48c3-ad71-d361d994b503" InformativeScreenshot="8736d47504607fa1b0a37c23f3965384.png" IsResponsive="True" ScopeSelectorArgument="&lt;wnd app='angkor.ylw.main.mainwin45.exe' cls='HwndWrapper*' title='CÔNG TY TNHH FUJIKIN VIỆT NAM - CHI NHÁNH NHÀ MÁY BẮC NINH' /&gt;" SearchSteps="Selector, FuzzySelector, CV" Version="V4" Visibility="Interactive">
                                                                                   <uix:TargetAnchorable.Anchors>
@@ -6213,7 +6232,7 @@
               <av:Point x:Key="ShapeLocation">420,310</av:Point>
               <av:Size x:Key="ShapeSize">60,60</av:Size>
               <av:PointCollection x:Key="TrueConnector">450,370 450,400 460,400 460,565</av:PointCollection>
-              <av:PointCollection x:Key="FalseConnector">480,340 540.4455270150579,340 540.4455270150579,50 625,50</av:PointCollection>
+              <av:PointCollection x:Key="FalseConnector">480,340 510,340 510,50 625,50</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </FlowDecision>
