@@ -109,9 +109,11 @@ Sub Run()
                 ' lastRow = newWs.Cells(newWs.Rows.Count, 1).End(xlUp).Row + 1 ' Xac dinh dong moi
                 lastRow = k + 1
                 itemCode = ws.Cells(i, 2).Value
+                itemName = ChrW(272) & ChrW(243) & ChrW(110) & ChrW(103) & ChrW(32) & ChrW(104) & ChrW(7897) & ChrW(112) & ChrW(32) & ChrW(45) & ChrW(12288) & ChrW(26801) & ChrW(21253)
                 ' Them dong moi
                 newWs.Cells(lastRow, 1).Value = productName
                 newWs.Cells(lastRow, 2).Value = phanLoai
+                newWs.Cells(lastRow, 3).Value = itemName
                 newWs.Cells(lastRow, 5).Value = itemCode
                 ' newWs.Cells(lastRow, 14).Value = newWs.Cells(lastRow - 1, 4).Value
                 newWs.Cells(lastRow, 15).Value = "1"
