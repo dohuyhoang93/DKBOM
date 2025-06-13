@@ -11,12 +11,18 @@ import json
 class WatchdogApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Watchdog Tracking UiPath Process")
+        self.root.title("Watchdog Tracking UIPath Process")
         self.root.geometry("700x500")
         self.root.resizable(True, True)
+        # Đặt icon với xử lý ngoại lệ và đường dẫn tương đối
+        try:
+            self.root.iconbitmap("WatchdogUiPath.ico")
+        except Exception as e:
+            print(f"Error setting icon: {e}. Using default icon.")
         self.is_running = False
         self.countdown_active = False
         self.countdown_seconds = 0
+        self.countdown_end_time = 0
 
         # Configurations
         self.lock_file = ""
@@ -68,7 +74,7 @@ class WatchdogApp:
 
         tk.Label(
             header_frame,
-            text="🔷 Watchdog Tracking UiPath Process 🔷",
+            text="🔷 Watchdog Tracking UIPath Process 🔷",
             font=("Helvetica", 16, "bold"),
             fg=self.accent_color,
             bg=self.bg_color
@@ -209,15 +215,20 @@ class WatchdogApp:
     def start_countdown(self, seconds):
         """Start countdown timer."""
         self.countdown_seconds = seconds
+        self.countdown_end_time = time.time() + seconds
         self.countdown_active = True
         self.update_countdown()
 
     def update_countdown(self):
         """Update countdown label every second."""
-        if self.countdown_active and self.countdown_seconds > 0:
-            self.countdown_label.config(text=f"Waiting {self.countdown_seconds} seconds...")
-            self.countdown_seconds -= 1
-            self.root.after(1000, self.update_countdown)
+        if self.countdown_active and self.is_running:
+            remaining = max(0, int(self.countdown_end_time - time.time()))
+            self.countdown_label.config(text=f"Waiting {remaining} seconds...")
+            if remaining > 0:
+                self.root.after(1000, self.update_countdown)
+            else:
+                self.countdown_label.config(text="")
+                self.countdown_active = False
         else:
             self.countdown_label.config(text="")
             self.countdown_active = False
@@ -225,10 +236,9 @@ class WatchdogApp:
     def wait_with_countdown(self, seconds):
         """Wait for specified seconds with countdown."""
         self.start_countdown(seconds)
-        for _ in range(seconds):
-            if not self.is_running:
-                break
-            time.sleep(1)
+        start_time = time.time()
+        while self.is_running and (time.time() - start_time) < seconds:
+            time.sleep(0.1)  # Small sleep to reduce CPU usage
         self.countdown_active = False
         self.countdown_label.config(text="")
 
