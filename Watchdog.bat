@@ -60,7 +60,7 @@ if /i "%STATUS%"=="FINISH" (
     call :done
     call :section "Watchdog Exiting"
     pause
-    exit
+    EXIT
 )
 
 call :GET_FILE_MODTIME
