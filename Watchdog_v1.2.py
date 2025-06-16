@@ -11,7 +11,7 @@ import json
 class WatchdogApp:
     def __init__(self, root):
         self.root = root
-        self.root.title("Watchdog Tracking UIPath Process")
+        self.root.title("Watchdog Tracking UiPath Process")
         self.root.geometry("700x500")
         self.root.resizable(True, True)
         # Đặt icon với xử lý ngoại lệ và đường dẫn tương đối
@@ -51,30 +51,13 @@ class WatchdogApp:
         """Set up the GUI with configuration options and countdown."""
         self.root.configure(bg=self.bg_color)
 
-        # Config Frame
-        config_frame = tk.Frame(self.root, bg=self.bg_color)
-        config_frame.pack(fill=tk.X, pady=10)
-
-        ttk.Label(config_frame, text="UiRobot.exe:", font=("Helvetica", 10), background=self.bg_color, foreground=self.fg_color).pack(side=tk.LEFT, padx=5)
-        self.uipath_entry = ttk.Entry(config_frame, width=50)
-        self.uipath_entry.pack(side=tk.LEFT, padx=5)
-        ttk.Button(config_frame, text="Browse", command=self.browse_uipath).pack(side=tk.LEFT)
-
-        config_frame2 = tk.Frame(self.root, bg=self.bg_color)
-        config_frame2.pack(fill=tk.X, pady=5)
-
-        ttk.Label(config_frame2, text="NUPKG Folder:", font=("Helvetica", 10), background=self.bg_color, foreground=self.fg_color).pack(side=tk.LEFT, padx=5)
-        self.nupkg_entry = ttk.Entry(config_frame2, width=50)
-        self.nupkg_entry.pack(side=tk.LEFT, padx=5)
-        ttk.Button(config_frame2, text="Browse", command=self.browse_nupkg).pack(side=tk.LEFT)
-
         # Header Frame
         header_frame = tk.Frame(self.root, bg=self.bg_color)
         header_frame.pack(fill=tk.X, pady=10)
 
         tk.Label(
             header_frame,
-            text="🔷 Watchdog Tracking UIPath Process 🔷",
+            text="Watchdog Tracking UiPath Process",
             font=("Helvetica", 16, "bold"),
             fg=self.accent_color,
             bg=self.bg_color
@@ -114,6 +97,23 @@ class WatchdogApp:
         self.log_area.pack(fill=tk.BOTH, expand=True)
         self.log_area.config(state='disabled')
 
+        # Config Frame
+        config_frame = tk.Frame(self.root, bg=self.bg_color)
+        config_frame.pack(fill=tk.X, pady=10)
+
+        ttk.Label(config_frame, text="UiRobot.exe:", font=("Helvetica", 10), background=self.bg_color, foreground=self.fg_color).pack(side=tk.LEFT, padx=5)
+        self.uipath_entry = ttk.Entry(config_frame, width=50)
+        self.uipath_entry.pack(side=tk.LEFT, padx=20)
+        ttk.Button(config_frame, text="Browse", command=self.browse_uipath).pack(side=tk.LEFT)
+
+        config_frame2 = tk.Frame(self.root, bg=self.bg_color)
+        config_frame2.pack(fill=tk.X, pady=5)
+
+        ttk.Label(config_frame2, text="NUPKG Folder:", font=("Helvetica", 10), background=self.bg_color, foreground=self.fg_color).pack(side=tk.LEFT, padx=5)
+        self.nupkg_entry = ttk.Entry(config_frame2, width=50)
+        self.nupkg_entry.pack(side=tk.LEFT, padx=5)
+        ttk.Button(config_frame2, text="Browse", command=self.browse_nupkg).pack(side=tk.LEFT, padx=15)
+
         # Button Frame
         button_frame = tk.Frame(self.root, bg=self.bg_color)
         button_frame.pack(fill=tk.X, pady=10)
@@ -121,11 +121,11 @@ class WatchdogApp:
         self.retry_label = tk.Label(
             button_frame,
             text=f"Retries: {self.retry_count}/{self.max_retry}",
-            font=("Helvetica", 10),
+            font=("Helvetica", 10, "bold"),
             fg=self.fg_color,
             bg=self.bg_color
         )
-        self.retry_label.pack(side=tk.LEFT, padx=10)
+        self.retry_label.pack(side=tk.LEFT, padx=5)
 
         self.start_button = ttk.Button(
             button_frame,
@@ -133,7 +133,7 @@ class WatchdogApp:
             command=self.start_watchdog,
             style="Accent.TButton"
         )
-        self.start_button.pack(side=tk.LEFT, padx=10)
+        self.start_button.pack(side=tk.LEFT, padx=22.5)
 
         self.stop_button = ttk.Button(
             button_frame,
@@ -146,9 +146,9 @@ class WatchdogApp:
 
         # Configure ttk styles
         style = ttk.Style()
-        style.configure("Accent.TButton", font=("Helvetica", 10), foreground=self.fg_color, background=self.accent_color)
+        style.configure("Accent.TButton", font=("Helvetica", 10), foreground="black", background=self.accent_color)
         style.map("Accent.TButton", background=[("active", "#2980B9")])
-        style.configure("Danger.TButton", font=("Helvetica", 10), foreground=self.fg_color, background=self.error_color)
+        style.configure("Danger.TButton", font=("Helvetica", 10), foreground="black", background=self.error_color)
         style.map("Danger.TButton", background=[("active", "#C0392B")])
 
     def load_config(self):
