@@ -1,34 +1,36 @@
 # <span style="color: #39ff14; text-shadow: 0 0 3px #39ff14, 0 0 6px #39ff14, 0 0 10px #39ff14; font-weight: bold;"><strong>HƯỚNG DẪN CÀI ĐẶT</strong></span><br>
-## 1. Nhập thông tin đăng nhập Ksystem trong gói file cài đặt:
-- Tải về file: `zip` của dự án. Mở UiPath studio và publish dự án sang file `DK.BOM.*.*.*.nupkg`.<br>
-- Lưu file `.nupkg` này tại thư mục `Documents` chính *(C:\Users\username\Documents\)*. **Đây là bắt buộc.**
-- Mở file `.nupkg` này ra (có thể mở bằng 7zip hoặc bất cứ chương trình giải nén nào).
+## 1. Nhập thông tin đăng nhập Ksystem:
+- Tải về file: `zip` của dự án. Sau đó giải nén ra. Hoặc `git clone` dự án về máy tính của bạn.
 - Tìm và mở file: `KsystemIdentication.txt`. Đây là file chứa thông tin đăng nhập Ksystem. Nhập thông tin đăng nhập cho user muốn sử dụng. Sau đó `Save` lại.<br>
     >id:user_name_đăng_nhập<br>
-    >passwword:mật_khẩu
-## 2. Lấy file `Input Data.xlsm` & `Watchdog.bat`
-- Tại thư mục đã giải nén, tìm file: `Watchdog.bat`. Copy file này và paste vào thư mục nào bạn thích. Hoặc tạo đường dẫn ***shortcut*** tới file này.<br>
-- Bạn cũng cần phải lấy file `Input Data.xlsm` từ trong này ra để sử dụng. Bởi vì, mỗi phiên bản mới của Project UiPath, sẽ đi kèm với thay đổi về input đầu vào trong file `Input data.xlsm` này.<br>
-- Kiểm tra đường dẫn tới `UiRobot.exe` có đúng với thực tế trên máy bạn không. Đường dẫn đúng có dạng:<br>*(C:\username\AppData\Local\Programs\UiPath\Studio\UiRobot.exe)* <br>
-Nếu không đúng, hãy cập nhật đường dẫn vào `Watchdog.bat` tại dòng:<br>
-    >*set "UIPATH_EXE=%USERPROFILE%\AppData\Local\Programs\UiPath\Studio\UiRobot.exe"*
+    >password:mật_khẩu
+- Mở UiPath studio và publish dự án sang file `DK.BOM.*.*.*.nupkg`.<br>
+- Lưu file `.nupkg` này tại thư mục `Documents` chính *(C:\Users\username\Documents\)*. **Đây là bắt buộc.**
+- Nếu bạn tải trực tiếp file `.nupkg` về. Mở file `.nupkg` này ra (có thể mở bằng 7zip hoặc bất cứ chương trình giải nén nào). Tìm và sửa file `KsystemIdentication.txt` như trên.
+## 2. Lấy file `Input Data.xlsm`
+- Tại thư mục đã giải nén, tìm file: `Input data.xlsm`. Đây là file sử dụng để cung cấp data đầu vào cho dự án UiPath đăng ký BOM. Mỗi phiên bản mới của dự án UiPath Đăng ký BOM, sẽ đi kèm với thay đổi về input đầu vào trong file `Input data.xlsm` này.<br>
 
-
+## 3. Lấy file `WatchdogUiPath.exe`
+- Cũng trong thư mục đã giải nén. Tìm file `WatchdogUiPath.exe`. Tạo shortcut của file này ra Desktop nếu bạn muốn.
+>WatchdogUiPath.exe là một chương trình phụ, dùng để chạy dự án UiPath Đăng ký BOM, đồng thời giám sát quá trình chạy.
+- Click đúp để chạy `WatchdogUiPath.exe`.
+- Tại mục `UiRobot.exe`, nhấn `Browse` để nhập đường dẫn tới file `UiRobot.exe` của UiPath. Đường dẫn thông thường có dạng:<br>
+*(C:\username\AppData\Local\Programs\UiPath\Studio\UiRobot.exe)* <br>
+- Tại mục `NUPKG Folder`, nhấn `Browse` để nhập thư mục Documents hoặc bất cứ thư mục nào đang chứa file `.nupkg`.<br>
+>Các thông tin này dược lưu vào JSON cho lần chạy sau. Không cần khai báo lại.<br>
+*Một phiên bản batch của Watchdog cũng được đính kèm trong thư mục chính đã tải về, cung cấp chức năng tương đương. Nhưng file `.nupkg` phải được để trong thư mục Documents: `%USERPROFILE%\Documents`*<br>
 #  Khởi chạy dự án:
-## Có 2 cách để chạy dự án.
+### Có 2 cách để chạy dự án.
 1. **Chạy trực tiếp dự án trong UiPath studio.**<br>
-    - Cách này chỉ có khả năng tự khởi động lại Ksystem sau khi đăng ký 10 mã.***(Tính năng này tạm thời đã bị tắt bỏ)***<br> 
     - Có thể quay lại bước đã dừng trước đó.<br>
-2. **Chạy từ `Watchdog.bat`**<br>
+    Nhưng không thể tự khởi động lại tiến trình khi có lỗi.<br>
+2. **Chạy từ `WatchdogUiPath.exe`**<br>
     - Có khả năng nhận ra dự án Uipath đang bị dừng do lỗi. Nó sẽ đóng tất cả tiến trình UiPath & Ksystem. Sau đó khởi động và chạy lại từ vị trí bị đăng ký lỗi trước đó. Sau 3 lần thử lại này. `Watchdog` sẽ tự thoát và xóa file `input.json` chứa thông tin về:<br>
-        - Lựa chọn các step đăng ký.
+        - Lựa chọn các step đăng ký.<br>
         - Vị trí file `Input Data.xlsm`<br>
-
-*Về bản chất, cách này sử dụng `Watchdog` như một chương trình giám sát, mở file `DK.BOM.*.*.*.nupkg` với trình chạy tự động `UiRobot`. Sau đó theo dõi quá trình hoạt động của dự án thông qua file `STATUS.lock`.*
-
 # Sau khi chạy xong
 Sau khi dự án chạy xong mà không phát sinh lỗi gì. Nó sẽ xóa các tệp:
-`input.json` và `STATUS.lock`.
+`input.json` và `STATUS.lock`.<br>
 Tên mã đã đăng ký xong, được lưu trong các file log tại `Document\LogUiPath`:<br>
 
 > DK_ITEM_Log.txt<br>
@@ -44,4 +46,5 @@ Dù đã có `Watchdog` giám sát. Nhưng không thể đảm bảo tất cả 
 - Lỗi kết nối internet của Ksystem<br>
 - Lỗi logic khi lập trình dự án UiPath<br>
 
-Các lỗi này có thể không gây dừng tiến trình UiPath. `Watchdog` không hề phát hiện ra sự cố. Mặc dù thực tế lỗi đã phát sinh. Vì vậy, tốt hơn cả là chạy dự án với sự giám sát của con người.
+Các lỗi này có thể không gây dừng tiến trình UiPath. `Watchdog` không hề phát hiện ra sự cố. Mặc dù thực tế lỗi đã phát sinh.<br>
+Vì vậy, tốt hơn cả là chạy dự án với sự giám sát của con người.<br>
