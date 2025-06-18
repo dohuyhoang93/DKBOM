@@ -1,6 +1,5 @@
 # Thư mục xuất tạm của UiPath
 *.local/
-*.screenshots/
 
 # File cache
 .project.json.user
