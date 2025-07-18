@@ -1,3 +1,59 @@
+# <span style="color: #39ff14; text-shadow: 0 0 3px #39ff14, 0 0 6px #39ff14, 0 0 10px #39ff14; font-weight: bold;"><strong>INSTALLATION GUIDE</strong></span><br>
+## 1. Enter Ksystem login information:
+- Download the project’s `zip` file and extract it, or use `git clone` to get the project onto your computer.
+- Locate and open the file: `KsystemIdentication.txt`. This file contains login credentials for Ksystem. Enter the login details for the user you want to use, then `Save` the file.<br>
+    >id:user_login_name<br>
+    >password:your_password
+- Open UiPath Studio and publish the project as a file named `DK.BOM.*.*.*.nupkg`.<br>
+- Save this `.nupkg` file in your main `Documents` folder *(C:\Users\username\Documents\)*. **This is mandatory.**
+- If you downloaded the `.nupkg` file directly, open it (using 7zip or any archive program), find and modify the `KsystemIdentication.txt` file as mentioned above.
+
+## 2. Get the `Input Data.xlsm` file
+- Inside the extracted folder, locate the file `Input data.xlsm`. This file provides the input data for the UiPath BOM Registration project. Each new version of the BOM Registration project may come with changes in the structure or content of this input file.<br>
+
+## 3. Get the `WatchdogUiPath.exe` file
+- Also in the extracted folder, locate the file `WatchdogUiPath.exe`. You may create a shortcut to this file on your Desktop if you wish.
+>WatchdogUiPath.exe is an auxiliary program used to run the BOM Registration project in UiPath and monitor its execution.
+- Double-click to run `WatchdogUiPath.exe`.
+- In the `UiRobot.exe` section, click `Browse` and specify the path to UiPath’s `UiRobot.exe`. This path typically looks like:<br>
+*(C:\username\AppData\Local\Programs\UiPath\Studio\UiRobot.exe)*<br>
+- In the `NUPKG Folder` section, click `Browse` and select the `Documents` folder or any folder that contains the `.nupkg` file.<br>
+>This configuration is saved in a JSON file for future runs. You won’t need to enter it again.<br>
+*A batch version of Watchdog is also included in the downloaded folder. It provides similar functionality, but the `.nupkg` file must be placed in the Documents folder: `%USERPROFILE%\Documents`*<br>
+
+# Launching the Project:
+### There are two ways to run the project:
+1. **Run the project directly in UiPath Studio.**<br>
+    - You can resume from the step where it was previously stopped.<br>
+    However, it cannot automatically restart the process in case of an error.<br>
+2. **Run from `WatchdogUiPath.exe`**<br>
+    - It can detect if the UiPath project has stopped due to an error. It will terminate all UiPath & Ksystem processes, then restart and resume from the point of failure. After 3 retry attempts, `Watchdog` will automatically exit and delete the `input.json` file that contains:<br>
+        - The selected registration steps<br>
+        - The path to the `Input Data.xlsm` file<br>
+
+# After Execution
+If the project completes successfully with no errors, it will delete the following files:
+`input.json` and `STATUS.lock`.<br>
+The names of the completed registrations are saved in log files located at `Document\LogUiPath`:<br>
+
+> DK_ITEM_Log.txt<br>
+> DK_BOM_Log.txt<br>
+> DK_HTCD_log.txt<br>
+> DK_QTSX_Log.txt<br>
+> DK_TTLV_Log.txt<br>
+
+UiPath **does not allow** reopening the project to **register these codes again**, unless you **manually delete** the names stored in these log files or remove the entire **LogUiPath** folder.<br>
+___
+Even though the `Watchdog` supervises the process, it **cannot detect all types of errors**. Some examples include:
+- Invalid input data from the `Input data.xlsm` file<br>
+- Ksystem internet connectivity issues<br>
+- Logic errors in the UiPath project<br>
+
+These types of issues may not stop the UiPath process, and as a result, `Watchdog` cannot detect them — even though the errors occurred.<br>
+Therefore, it is recommended to run the project under human supervision.<br>
+
+---
+
 # <span style="color: #39ff14; text-shadow: 0 0 3px #39ff14, 0 0 6px #39ff14, 0 0 10px #39ff14; font-weight: bold;"><strong>HƯỚNG DẪN CÀI ĐẶT</strong></span><br>
 ## 1. Nhập thông tin đăng nhập Ksystem:
 - Tải về file: `zip` của dự án. Sau đó giải nén ra. Hoặc `git clone` dự án về máy tính của bạn.
